@@ -1,0 +1,21 @@
+#bottom-bar-container {
+    background-color: rgba(163, 163, 163, 0.5);
+    position: absolute;
+    bottom: 2px;
+    align-items: center;
+    border-radius: 2vh;
+}
+
+.bottom-bar-item {
+    width: 3vw;
+    height: 3vw;
+    margin: 0.5vw;
+    display: inline-block;
+    border-radius: 1.5vh;
+    font-size: 1.7vw;
+    cursor: pointer;
+}
+
+.color-test {
+    color: rgb(110, 105, 105);
+}
