@@ -1,5 +1,12 @@
 import { Component } from 'react';
 import { Tabs } from './Tabs';
+import About from './About';
+import Project from './Project';
+import Blog from './Blog';
+import Writeup from './Writeup';
+import Games from './Games';
+import Settings from './Settings';
+import Trash from './Trash';
 
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
 import '../css/w3.css';
@@ -10,45 +17,31 @@ class TabBody extends Component {
         switch (this.props.tab) {
             case Tabs.ABOUT:
                 return (
-                    <div className='w3-container'>
-                        Hello World
-                    </div>
+                    <About />
                 )
             case Tabs.PROJECT:
                 return (
-                    <div className='w3-container'>
-                        Hello World
-                    </div>
+                    <Project />
                 )
             case Tabs.BLOG:
                 return (
-                    <div className='w3-container'>
-                        Hello World
-                    </div>
+                    <Blog />
                 )
             case Tabs.WRITEUP:
                 return (
-                    <div className='w3-container'>
-                        Hello World
-                    </div>
+                    <Writeup />
                 )
             case Tabs.GAME:
                 return (
-                    <div className='w3-container'>
-                        Hello World
-                    </div>
+                    <Games />
                 )
             case Tabs.SETTING:
                 return (
-                    <div className='w3-container'>
-                        Hello World
-                    </div>
+                    <Settings />
                 )
             case Tabs.TRASH:
                 return (
-                    <div className='w3-container'>
-                        Hello World
-                    </div>
+                    <Trash />
                 )
             default:
                 console.log("Invalid Tab");
