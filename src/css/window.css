@@ -1,0 +1,76 @@
+.window {
+  position: absolute;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.window-header {
+  padding: 0.5vw;
+  display: flex;
+  background-color: #d3d3d3;
+  height: 4vh;
+  cursor: default;
+}
+
+.window-header-close {
+  background-color: rgb(255, 96, 92);
+  height: 1vw;
+  width: 1vw;
+  border-radius: 2vh;
+  cursor: pointer;
+  font-size: 8px;
+  text-align: center;
+}
+
+.window-header-close-icon {
+  display: none;
+}
+
+.window-header-close:hover .window-header-close-icon{
+  display: contents;
+}
+
+.window-header-minimize {
+  background-color: rgb(255, 189, 68);
+  height: 1vw;
+  width: 1vw;
+  border-radius: 2vh;
+  cursor: pointer;
+  font-size: 8px;
+  text-align: center;
+}
+
+.window-header-minimize-icon {
+  display: none;
+}
+
+.window-header-minimize:hover .window-header-minimize-icon{
+  display: contents;
+}
+
+.window-header-maximize {
+  background-color: rgb(0, 202, 78);
+  height: 1vw;
+  width: 1vw;
+  border-radius: 2vh;
+  cursor: pointer;
+  font-size: 8px;
+  text-align: center;
+  padding-bottom: 0.5px;
+}
+
+.window-header-maximize-icon {
+  display: none;
+}
+
+.window-header-maximize:hover .window-header-maximize-icon{
+  display: contents;
+}
+
+.window-header-title {
+  height: 2vh;
+  font-size: 12px;
+  text-align: center;
+  flex-grow: 100;
+}

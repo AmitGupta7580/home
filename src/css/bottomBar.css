@@ -1,6 +1,7 @@
 #bottom-bar-container {
     background-color: rgba(163, 163, 163, 0.5);
     position: absolute;
+    z-index: 100;
     bottom: 2px;
     align-items: center;
     border-radius: 2vh;
@@ -14,8 +15,4 @@
     border-radius: 1.5vh;
     font-size: 1.7vw;
     cursor: pointer;
-}
-
-.color-test {
-    color: rgb(110, 105, 105);
 }

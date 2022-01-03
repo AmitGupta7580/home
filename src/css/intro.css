@@ -13,6 +13,7 @@ body, html {
   height: 50px;
   width: 50px;
   position: absolute;
+  z-index: 99;
   background-color: rgb(29, 29, 29);
   border-radius: 50%;
   display: inline-block;
@@ -22,6 +23,7 @@ body, html {
   height: 50px;
   width: 50px;
   position: absolute;
+  z-index: 100;
   transform: translate(13px, 13px);
   cursor: pointer;
 }
