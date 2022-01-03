@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import BottomBar from './BottomNavBar';
 import Window from './Window';
-import { Tabs } from './Tabs';
+import { CONSTANTS, Tabs } from './Tabs';
 
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
 import '../css/w3.css';
@@ -25,8 +25,8 @@ class Home extends Component {
     handelOpen = (tab) => {
         if(!tab.open){
             tab.open = true;
-            tab.x = this.randomGenerator(0, 500);
-            tab.y = this.randomGenerator(0, 200);
+            tab.x = this.randomGenerator(100, 500);
+            tab.y = this.randomGenerator(20, 200);
         }
         this.handleMinimize(tab);
         this.setState({});
@@ -37,8 +37,8 @@ class Home extends Component {
             tab.vis = false;
         } else {
             tab.vis = true;
-            Tabs.idxcount += 1;
-            tab.idx = Tabs.idxcount;
+            CONSTANTS.idxcount += 1;
+            tab.zIndex = CONSTANTS.idxcount;
         }
         this.setState({});
     }
@@ -47,22 +47,12 @@ class Home extends Component {
         return Math.floor( min + Math.random() * (max - min) );
     }
 
-    tabs_compare = (a,b) =>  {
-        return a.idx - b.idx;
-    }
-
     render() {
-
-        var tabs = [], items = [], tab = null;
-        for(tab in Tabs){
+        var items = [];
+        for(var tab in Tabs){
             if(Tabs[tab].vis) {
-                tabs.push(Tabs[tab]);
+                items.push(<Window tab={ Tabs[tab] } handleClose={ this.handleClose } handleMinimize={ this.handleMinimize }  resethome={ () => this.setState({}) } />)
             }
-        }
-        tabs.sort(this.tabs_compare);
-        for(tab in tabs){
-            tabs[tab].zIndex = parseInt(tab) + 1;
-            items.push(<Window tab={ tabs[tab] } handleClose={ this.handleClose } handleMinimize={ this.handleMinimize }  resethome={ () => this.setState({}) } />)
         }
 
         return (

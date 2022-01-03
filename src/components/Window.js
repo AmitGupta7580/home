@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Tabs } from './Tabs';
+import { CONSTANTS, Tabs } from './Tabs';
 import About from './About';
 import Project from './Project';
 import Blog from './Blog';
@@ -59,32 +59,17 @@ class Window extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            theme: 'light',
-            ...(this.props.tab.fullscreen ? {
-                width: this.props.tab.full_width, 
-                top: 0,
-                left: 100,
-            } : {
-                width: this.props.tab.short_width,
-                top: this.props.tab.y,
-                left: this.props.tab.x,
-            })
+            theme: 'light'
         };
     }
 
     toggleFullScreen = () => {
+        if(this.props.tab.zIndex != CONSTANTS.idxcount){
+            CONSTANTS.idxcount += 1;
+            this.props.tab.zIndex = CONSTANTS.idxcount;
+        }
         this.props.tab.fullscreen = !this.props.tab.fullscreen;
-        this.setState({ 
-            ...(this.props.tab.fullscreen ? {
-                width: this.props.tab.full_width, 
-                top: 0,
-                left: 100,
-            } : {
-                width: this.props.tab.short_width,
-                top: this.props.tab.y,
-                left: this.props.tab.x,
-            })
-        });
+        this.setState({});
     }
 
     toggleTheme = () => {
@@ -99,10 +84,11 @@ class Window extends Component {
     }  // feature in settings to change the theme
 
     dragMouseDown = (e) => {
-        this.props.tab.zIndex = 25;
-        Tabs.idxcount += 1;
-        this.props.tab.idx = Tabs.idxcount;
-        this.setState({});
+        if(this.props.tab.zIndex != CONSTANTS.idxcount){
+            CONSTANTS.idxcount += 1;
+            this.props.tab.zIndex = CONSTANTS.idxcount;
+            this.setState({});
+        }
         e = e || window.event;
         e.preventDefault();
         this.pos3 = e.clientX;
@@ -120,22 +106,18 @@ class Window extends Component {
         this.pos4 = e.clientY;
         this.props.tab.y = (this.props.tab.y - this.pos2);
         this.props.tab.x = (this.props.tab.x - this.pos1);
-        this.setState({
-            top: this.props.tab.y,
-            left: this.props.tab.x
-        });
+        this.setState({});
     }
 
     closeDragElement = () => {
         document.onmouseup = null;
         document.onmousemove = null;
-        this.props.resethome();
     }
 
     render() {
         return (
-            <div className="window" style={{ top: this.state.top + 'px', left: this.state.left + 'px', zIndex: this.props.tab.zIndex}}>
-                <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ width: this.state.width + "vw" }}>
+            <div className="window" style={{ ...(this.props.tab.fullscreen ? { top: '0px', left: '100px' } : { top: this.props.tab.y + 'px', left: this.props.tab.x + 'px' }), zIndex: this.props.tab.zIndex}}>
+                <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ ...(this.props.tab.fullscreen ? { width: this.props.tab.full_width + "vw" } : { width: this.props.tab.short_width + "vw" }) }}>
                     <div className="window-header-close" onClick={ () => this.props.handleClose(this.props.tab) }>
                         <i class="fas fa-times window-header-close-icon"></i>
                     </div>&nbsp;

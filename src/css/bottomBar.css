@@ -1,7 +1,7 @@
 #bottom-bar-container {
     background-color: rgba(163, 163, 163, 0.5);
     position: absolute;
-    z-index: 100;
+    z-index: 2147483647;
     bottom: 2px;
     align-items: center;
     border-radius: 2vh;

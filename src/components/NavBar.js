@@ -10,7 +10,7 @@ function LinkBar() {
     }
 
     return (
-    <div className="w3-top w3-container" style={{ zIndex: 10 }}>
+    <div className="w3-top w3-container" style={{ zIndex: 2147483647 }}>
         <div className="w3-display-topleft w3-padding-large w3-xlarge w3-text-white" onClick={(e) => (async () => {
             var counter = 0;
             if($('.link')[0].style.display === "none" || $('.link')[0].style.display === ""){
