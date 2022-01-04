@@ -1,0 +1,8 @@
+.blog-small {
+    padding: 2vh;
+}
+
+.blog-small-header {
+    height: 10vh;
+    display: flex;
+}

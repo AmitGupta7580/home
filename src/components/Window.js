@@ -1,7 +1,11 @@
 import { Component } from 'react';
 import { CONSTANTS, Tabs } from './Tabs';
 import About from './About';
+import Education from './Education';
+import Experience from './Experience';
 import Project from './Project';
+import Achievements from './Achievements';
+import Volunteer from './Volunteer';
 import Blog from './Blog';
 import Writeup from './Writeup';
 import Games from './Games';
@@ -19,9 +23,25 @@ class TabBody extends Component {
                 return (
                     <About fullscreen={ this.props.fullscreen } />
                 )
+            case Tabs.EDUCATION:
+                return (
+                    <Education fullscreen={ this.props.fullscreen } />
+                )
+            case Tabs.EXPERIENCE:
+                return (
+                    <Experience fullscreen={ this.props.fullscreen } />
+                )
             case Tabs.PROJECT:
                 return (
                     <Project fullscreen={ this.props.fullscreen } />
+                )
+            case Tabs.ACHIEVEMENTS:
+                return (
+                    <Achievements fullscreen={ this.props.fullscreen } />
+                )
+            case Tabs.VOLUNTEER:
+                return (
+                    <Volunteer fullscreen={ this.props.fullscreen } />
                 )
             case Tabs.BLOG:
                 return (
@@ -45,6 +65,7 @@ class TabBody extends Component {
                 )
             default:
                 console.log("Invalid Tab");
+                return <div> Invid tab </div>
         }
     }
 }
