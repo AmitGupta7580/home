@@ -1,0 +1,29 @@
+#about-small {
+    height: 60vh;
+    display: flex;
+} 
+
+#about-small-shortdes {
+    flex-grow: 100;
+}
+
+#about-small-longdes {
+    background-color: #d3d3d3;
+    height: 56vh;
+    width: 23vw;
+    padding: 2vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#about-small-avtar {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform:translate(-45%,-50%);
+}
+
+#about-small-shortdes-des {
+    height: 30vh;
+    padding: 2vh;
+}

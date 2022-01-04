@@ -51,7 +51,7 @@ class Home extends Component {
         var items = [];
         for(var tab in Tabs){
             if(Tabs[tab].vis) {
-                items.push(<Window tab={ Tabs[tab] } handleClose={ this.handleClose } handleMinimize={ this.handleMinimize }  resethome={ () => this.setState({}) } />)
+                items.push(<Window key={tab} tab={ Tabs[tab] } handleClose={ this.handleClose } handleMinimize={ this.handleMinimize }  resethome={ () => this.setState({}) } />)
             }
         }
 

@@ -16,3 +16,18 @@
     font-size: 1.7vw;
     cursor: pointer;
 }
+
+.bottom-bar-tooltip {
+    display: inline-block;
+}
+
+.bottom-bar-tooltip .bottom-bar-tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    bottom: 4vw;
+    font-size: 14px;
+}
+
+.bottom-bar-tooltip:hover .bottom-bar-tooltiptext {
+    visibility: visible;
+}

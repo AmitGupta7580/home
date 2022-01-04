@@ -17,31 +17,31 @@ class TabBody extends Component {
         switch (this.props.tab) {
             case Tabs.ABOUT:
                 return (
-                    <About />
+                    <About fullscreen={ this.props.fullscreen } />
                 )
             case Tabs.PROJECT:
                 return (
-                    <Project />
+                    <Project fullscreen={ this.props.fullscreen } />
                 )
             case Tabs.BLOG:
                 return (
-                    <Blog />
+                    <Blog fullscreen={ this.props.fullscreen } />
                 )
             case Tabs.WRITEUP:
                 return (
-                    <Writeup />
+                    <Writeup fullscreen={ this.props.fullscreen } />
                 )
             case Tabs.GAME:
                 return (
-                    <Games />
+                    <Games fullscreen={ this.props.fullscreen } />
                 )
             case Tabs.SETTING:
                 return (
-                    <Settings />
+                    <Settings fullscreen={ this.props.fullscreen } />
                 )
             case Tabs.TRASH:
                 return (
-                    <Trash />
+                    <Trash fullscreen={ this.props.fullscreen } />
                 )
             default:
                 console.log("Invalid Tab");
@@ -64,7 +64,7 @@ class Window extends Component {
     }
 
     toggleFullScreen = () => {
-        if(this.props.tab.zIndex != CONSTANTS.idxcount){
+        if(this.props.tab.zIndex !== CONSTANTS.idxcount){
             CONSTANTS.idxcount += 1;
             this.props.tab.zIndex = CONSTANTS.idxcount;
         }
@@ -84,7 +84,7 @@ class Window extends Component {
     }  // feature in settings to change the theme
 
     dragMouseDown = (e) => {
-        if(this.props.tab.zIndex != CONSTANTS.idxcount){
+        if(this.props.tab.zIndex !== CONSTANTS.idxcount){
             CONSTANTS.idxcount += 1;
             this.props.tab.zIndex = CONSTANTS.idxcount;
             this.setState({});
@@ -119,18 +119,18 @@ class Window extends Component {
             <div className="window" style={{ ...(this.props.tab.fullscreen ? { top: '0px', left: '100px' } : { top: this.props.tab.y + 'px', left: this.props.tab.x + 'px' }), zIndex: this.props.tab.zIndex}}>
                 <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ ...(this.props.tab.fullscreen ? { width: this.props.tab.full_width + "vw" } : { width: this.props.tab.short_width + "vw" }) }}>
                     <div className="window-header-close" onClick={ () => this.props.handleClose(this.props.tab) }>
-                        <i class="fas fa-times window-header-close-icon"></i>
+                        <i className="fas fa-times window-header-close-icon"></i>
                     </div>&nbsp;
                     <div className="window-header-minimize" onClick={ () => this.props.handleMinimize(this.props.tab) }>
-                        <i class="fas fa-window-minimize window-header-minimize-icon"></i>
+                        <i className="fas fa-window-minimize window-header-minimize-icon"></i>
                     </div>&nbsp;
                     <div className="window-header-maximize" onClick={ this.toggleFullScreen }>
-                        <i class="fas fa-plus  window-header-maximize-icon"></i>
+                        <i className="fas fa-plus  window-header-maximize-icon"></i>
                     </div>
                     <div className="window-header-title">{this.props.tab.title}</div>
                 </div>
                 {/* Body of each tab */}
-                <TabBody tab={ this.props.tab }/>
+                <TabBody tab={ this.props.tab } fullscreen={ this.props.tab.fullscreen }/>
             </div>
         )       
     }

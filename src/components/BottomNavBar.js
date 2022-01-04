@@ -9,8 +9,13 @@ class BottomBarItem extends Component {
 
     render() {
         return (
-            <div className='bottom-bar-item' style={{backgroundColor: this.props.icon.bgColor, color: this.props.icon.color, fontSize: this.props.icon.size}} onClick={ this.props.handleClick }>
-                <i className={this.props.icon.class} style={{ transform: "translate(" + this.props.icon.transform + ")" }}></i>
+            <div className="bottom-bar-tooltip">
+                <span className="bottom-bar-tooltiptext" style={{left: this.props.icon.hintLeft + 'vh'}}>
+                    <div style={{ backgroundColor: 'white', border: '2px solid grey', borderRadius: '4px', paddingLeft: '2px', paddingRight: '2px' }}>{ this.props.icon.hint }</div>
+                </span>
+                <div className='bottom-bar-item' style={{backgroundColor: this.props.icon.bgColor, color: this.props.icon.color, fontSize: this.props.icon.size}} onClick={ this.props.handleClick }>
+                    <i className={this.props.icon.class} style={{ transform: "translate(" + this.props.icon.transform + ")" }}></i>
+                </div>
             </div>
         )
     }
@@ -20,15 +25,11 @@ class BottomBar extends Component {
     //margin-left: 37.5vw; /* (100 - 6*no.of*items)/2 = 70/2 = 35 */
     constructor(props) {
         super(props);
-        const items = [
-            <BottomBarItem icon={Icons.ABOUT} handleClick={() => props.handleClick(Tabs.ABOUT)}/>, 
-            <BottomBarItem icon={Icons.PROJECT} handleClick={() => props.handleClick(Tabs.PROJECT)} />, 
-            <BottomBarItem icon={Icons.BLOG} handleClick={() => props.handleClick(Tabs.BLOG)} />, 
-            <BottomBarItem icon={Icons.WRITEUP} handleClick={() => props.handleClick(Tabs.WRITEUP)} />, 
-            <BottomBarItem icon={Icons.GAME} handleClick={() => props.handleClick(Tabs.GAME)} />,
-            <BottomBarItem icon={Icons.SETTING} handleClick={() => props.handleClick(Tabs.SETTING)} />,
-            <BottomBarItem icon={Icons.TRASH} handleClick={() => props.handleClick(Tabs.TRASH)} />,
-        ];
+        const items = [];
+        for(var icon in Icons){
+            const tab = Tabs[icon];
+            items.push(<BottomBarItem key={icon} icon={Icons[icon]} handleClick={() => props.handleClick(tab)} />)
+        }
         this.state = { 
             items: items,
             marginLeft: (100 - 4*(items.length))/2
