@@ -1,36 +1,41 @@
 import { Component } from 'react';
 
-import '../css/writeup.css';
+import '../css/browser.css';
+
+import favicon from '../images/favicon-16x16.png'
 
 class Writeup extends Component {
     render() {
-        return this.props.fullscreen ? (
-            <div id="writeup-large">
-                <div id="writeup-large-header">
-                    <div style={{ width:'85vw' }}>
-                        "https://writeups.ammmy.me"
-                    </div>
-                    <a target="_blank" href="https://writeups.ammmy.me">
-                        <div>
-                            <i className="fas fa-location-arrow"></i>
+        return (
+            <div>
+                <div id="browser-header1">
+                    <div className="browser-header1-quater1"><div id="browser-header1-quater2"></div></div>
+                    <div id="browser-header1-tab">
+                        <img src={favicon} alt=""/> &nbsp;&nbsp;
+                        <div style={{ fontSize: '11px', color: 'white' }}>
+                            Writeups | Amit Gupta
                         </div>
-                    </a>
-                </div>
-                <iframe src={"https://writeups.ammmy.me"} title="Blogs Iframe Large" style={{ width: "90vw", height: "85vh"}} />    
-            </div>
-        ) : (
-            <div id="writeup-small">
-                <div id="writeup-small-header">
-                    <div style={{ width:'35vw' }}>
-                        "https://writeups.ammmy.me"
                     </div>
-                    <a target="_blank" href="https://writeups.ammmy.me">
-                        <div>
+                    <div className="browser-header1-quater1"><div id="browser-header1-quater3"></div></div>
+                    
+                    <div id="browser-header1-navigator">
+                        <a target="_blank" href="https://writeups.ammmy.me">
                             <i className="fas fa-location-arrow"></i>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    
                 </div>
-                <iframe src={"https://writeups.ammmy.me"} title="Blogs Iframe Small" style={{ width: "40vw", height: "60vh"}} />    
+                <div id="browser-header2">
+                    <div style={{ fontSize: '12px' }}>
+                        <i className="fas fa-arrow-left browser-header2-icon"></i>
+                        <i className="fas fa-arrow-right browser-header2-icon"></i>
+                        <i className="fas fa-redo-alt browser-header2-icon"></i>
+                    </div>
+                    <div id="browser-header2-url">
+                        <i class="fas fa-exclamation-triangle" style={{ marginLeft: '1.5vh', marginTop: '0.5vh'}}></i> &nbsp; Not secure | &nbsp; <div style={{ color: 'white' }}>writeups.ammmy.me</div> 
+                    </div>
+                </div>
+                { (this.props.fullscreen) ? <iframe src={"https://writeups.ammmy.me"} title="Writeups Iframe Large" style={{ width: "90vw", height: "75vh"}} /> : <iframe src={"https://writeups.ammmy.me"} title="Writeups Iframe Small" style={{ width: "50vw", height: "60vh"}} /> }
             </div>
         );
     }
