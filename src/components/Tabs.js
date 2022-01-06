@@ -1,11 +1,11 @@
 export const Tabs = {
-    ABOUT : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "About | Amit Gupta"},
+    ABOUT : {open: true, vis: true, x: 425, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "About | Amit Gupta"},
     EDUCATION : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Education | Amit Gupta"},
     EXPERIENCE : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Experience | Amit Gupta"},
     PROJECT : {open: false, vis: false, x: 250, y: 150, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Projects | Amit Gupta"},
     ACHIEVEMENTS : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Achievements | Amit Gupta"},
     VOLUNTEER : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Volunteer | Amit Gupta"},
-    BLOG : {open: true, vis: true, x: 350, y: 60, fullscreen: false, short_width: 50, full_width: 90, zIndex: 0, title: "Blogs | Amit Gupta"},
+    BLOG : {open: false, vis: false, x: 350, y: 60, fullscreen: false, short_width: 50, full_width: 90, zIndex: 0, title: "Blogs | Amit Gupta"},
     WRITEUP : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 50, full_width: 90, zIndex: 0, title: "Writeups | Amit Gupta"},
     GAME : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Games"},
     SETTING : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Settings"},

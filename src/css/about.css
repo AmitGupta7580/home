@@ -4,16 +4,19 @@
 } 
 
 #about-small-shortdes {
-    flex-grow: 100;
+    width: 15vw;
+    margin: 1vh 0px 0px 1vw;
 }
 
 #about-small-longdes {
+    margin-top: 2vh;
     background-color: #d3d3d3;
     height: 56vh;
     width: 23vw;
     padding: 2vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    flex-grow: 100;
 }
 
 #about-small-avtar {
@@ -24,6 +27,41 @@
 }
 
 #about-small-shortdes-des {
+    height: 30vh;
+    padding: 2vh;
+}
+
+/**/
+
+#about-large {
+    height: 84vh;
+    display: flex;
+} 
+
+#about-large-shortdes {
+    width: 25vw;
+    margin: 2vh 0px 0px 2vw;
+}
+
+#about-large-longdes {
+    margin-top: 2vh;
+    background-color: #d3d3d3;
+    height: 80vh;
+    width: 23vw;
+    padding: 2vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-grow: 100;
+}
+
+#about-large-avtar {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform:translate(-45%,-50%);
+}
+
+#about-large-shortdes-des {
     height: 30vh;
     padding: 2vh;
 }
