@@ -4,7 +4,7 @@ export const about = {
     'EMAIL': 'amit758000@gmail.com',
     'NATIONALITY': 'Indian',
     'LANGUAGES': ['English', 'Hindi'],
-    'DES_TITLE': 'IT Undergraduate',
+    'DES_TITLE': 'CSE Undergraduate',
     'DESCRIPTION': 'A Tech enthusiast, quick learner and believes in the power of technology.',
     'AREA_OF_INTEREST': [
         'Competitive Coding', 'Autonomous vehicles', 'Exploiting Machine', 'Quantum Computing', 'Cryptography'

@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { CONSTANTS, Tabs } from './Tabs';
+import { CONSTANTS, Tabs } from './Data';
 import About from './About';
 import Education from './Education';
 import Experience from './Experience';
@@ -57,7 +57,7 @@ class TabBody extends Component {
                 )
             case Tabs.SETTING:
                 return (
-                    <Settings fullscreen={ this.props.fullscreen } />
+                    <Settings fullscreen={ this.props.fullscreen } changeBackground={ this.props.changeBackground } />
                 )
             case Tabs.TRASH:
                 return (
@@ -151,7 +151,7 @@ class Window extends Component {
                     <div className="window-header-title">{this.props.tab.title}</div>
                 </div>
                 {/* Body of each tab */}
-                <TabBody tab={ this.props.tab } fullscreen={ this.props.tab.fullscreen }/>
+                <TabBody tab={ this.props.tab } fullscreen={ this.props.tab.fullscreen } changeBackground={this.props.changeBackground } />
             </div>
         )       
     }

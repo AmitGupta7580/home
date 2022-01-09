@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import BottomBar from './BottomNavBar';
 import Window from './Window';
-import { CONSTANTS, Tabs } from './Tabs';
+import { CONSTANTS, Tabs } from './Data';
 
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
 import '../css/w3.css';
@@ -51,7 +51,7 @@ class Home extends Component {
         var items = [];
         for(var tab in Tabs){
             if(Tabs[tab].vis) {
-                items.push(<Window key={tab} tab={ Tabs[tab] } handleClose={ this.handleClose } handleMinimize={ this.handleMinimize }  resethome={ () => this.setState({}) } />)
+                items.push(<Window key={tab} tab={ Tabs[tab] } handleClose={ this.handleClose } handleMinimize={ this.handleMinimize } changeBackground = { this.props.changeBackground } />)
             }
         }
 

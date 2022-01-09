@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import {Tabs, Icons} from './Tabs'
+import {Tabs, Icons} from './Data'
 
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
 import '../css/w3.css';

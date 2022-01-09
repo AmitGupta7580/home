@@ -1,3 +1,9 @@
+import bgimage1 from '../images/bgimage.jpg';
+import bgimage2 from '../images/bgimage2.jpg';
+import bgimage3 from '../images/bgimage3.jpg';
+
+export const BackgroundImages = [bgimage1, bgimage2, bgimage3];
+
 export const Tabs = {
     ABOUT : {open: true, vis: true, x: 425, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "About | Amit Gupta"},
     EDUCATION : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Education | Amit Gupta"},
@@ -27,5 +33,6 @@ export const Icons = {
 }
 
 export const CONSTANTS = {
-    idxcount: 3
+    idxcount: 3,
+    bgidx: 0
 }
