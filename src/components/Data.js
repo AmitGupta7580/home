@@ -5,17 +5,17 @@ import bgimage3 from '../images/bgimage3.jpg';
 export const BackgroundImages = [bgimage1, bgimage2, bgimage3];
 
 export const Tabs = {
-    ABOUT : {open: true, vis: true, x: 425, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "About | Amit Gupta"},
-    EDUCATION : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Education | Amit Gupta"},
-    EXPERIENCE : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Experience | Amit Gupta"},
-    PROJECT : {open: false, vis: false, x: 250, y: 150, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Projects | Amit Gupta"},
-    ACHIEVEMENTS : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Achievements | Amit Gupta"},
-    VOLUNTEER : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Volunteer | Amit Gupta"},
-    BLOG : {open: false, vis: false, x: 350, y: 60, fullscreen: false, short_width: 50, full_width: 90, zIndex: 0, title: "Blogs | Amit Gupta"},
-    WRITEUP : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 50, full_width: 90, zIndex: 0, title: "Writeups | Amit Gupta"},
-    GAME : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Games"},
-    SETTING : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Settings"},
-    TRASH : {open: false, vis: false, x: 250, y: 100, fullscreen: false, short_width: 40, full_width: 90, zIndex: 0, title: "Trash"},
+    ABOUT : {id: 1, open: true, vis: true, x: 425, y: 100, fullscreen: false, short_width: 40, full_width: 90,short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "About | Amit Gupta"},
+    EDUCATION : {id: 2, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, full_width: 90, zIndex: 0, opacity: 1, title: "Education | Amit Gupta"},
+    EXPERIENCE : {id: 3, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 40, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Experience | Amit Gupta"},
+    PROJECT : {id: 4, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 40, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Projects | Amit Gupta"},
+    ACHIEVEMENTS : {id: 5, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 40, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Achievements | Amit Gupta"},
+    VOLUNTEER : {id: 6, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 40, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Volunteer | Amit Gupta"},
+    BLOG : {id: 7, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 50, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Blogs | Amit Gupta"},
+    WRITEUP : {id: 8, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 50, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Writeups | Amit Gupta"},
+    GAME : {id: 9, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 40, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Games"},
+    SETTING : {id: 10, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 40, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Settings"},
+    TRASH : {id: 11, open: false, vis: false, x: 0, y: 0, fullscreen: false, short_width: 40, full_width: 90, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Trash"},
 };
 
 export const Icons = {

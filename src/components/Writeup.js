@@ -35,7 +35,7 @@ class Writeup extends Component {
                         <i class="fas fa-exclamation-triangle" style={{ marginLeft: '1.5vh', marginTop: '0.5vh'}}></i> &nbsp; Not secure | &nbsp; <div style={{ color: 'white' }}>writeups.ammmy.me</div> 
                     </div>
                 </div>
-                { (this.props.fullscreen) ? <iframe src={"https://writeups.ammmy.me"} title="Writeups Iframe Large" style={{ width: "90vw", height: "75vh"}} /> : <iframe src={"https://writeups.ammmy.me"} title="Writeups Iframe Small" style={{ width: "50vw", height: "60vh"}} /> }
+                { (this.props.fullscreen) ? <iframe src={"https://writeups.ammmy.me"} title="Writeups Iframe Large" style={{ width: "100%", height: "75vh"}} /> : <iframe src={"https://writeups.ammmy.me"} title="Writeups Iframe Small" style={{ width: "100%", height: "60vh"}} /> }
             </div>
         );
     }

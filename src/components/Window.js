@@ -15,6 +15,7 @@ import Trash from './Trash';
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
 import '../css/w3.css';
 import '../css/window.css';
+import $ from 'jquery';
 
 class TabBody extends Component {
     render() {
@@ -136,16 +137,75 @@ class Window extends Component {
     }
 
     render() {
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
         return (
-            <div className="window" style={{ ...(this.props.tab.fullscreen ? { top: '0px', left: '100px' } : { top: this.props.tab.y + 'px', left: this.props.tab.x + 'px' }), zIndex: this.props.tab.zIndex}}>
-                <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ ...(this.props.tab.fullscreen ? { width: this.props.tab.full_width + "vw" } : { width: this.props.tab.short_width + "vw" }) }}>
+            <div className="window" id={"window-" + this.props.tab.id} style={{ ...(this.props.tab.fullscreen ? { top: '0px', left: '100px', width: this.props.tab.full_width + "vw", height: this.props.tab.full_height + "vh"} : { top: this.props.tab.y + 'px', left: this.props.tab.x + 'px', width: this.props.tab.short_width + "vw", height: this.props.tab.short_height + "vh" }), zIndex: this.props.tab.zIndex, opacity: this.props.tab.opacity }}>
+                <div className="window-header" onMouseDown={ this.dragMouseDown }>
                     <div className="window-header-close" onClick={ () => this.props.handleClose(this.props.tab) }>
                         <i className="fas fa-times window-header-close-icon"></i>
                     </div>&nbsp;
-                    <div className="window-header-minimize" onClick={ () => this.props.handleMinimize(this.props.tab) }>
+                    <div className="window-header-minimize" onClick={ () => ( async () => {
+                        // animation
+                        var counter = 50, sleep_time = 2;
+                        const facX = ((window.innerWidth*(25 + (4.3)*this.props.tab.id))/100 - this.props.tab.x)/counter;
+                        const facY = (window.innerHeight - this.props.tab.y)/counter;
+                        var facW = 0, facH = 0;
+                        $('#window-'+this.props.tab.id).each(function(){
+                            facW = (0 - Number($(this)[0].style.width.slice(0, -2)))/counter;
+                            facH = (0 - Number($(this)[0].style.height.slice(0, -2)))/counter;
+                        });
+                        const facOPC = (0 - 1)/counter;
+                        while(counter !== 0){
+                            $('#window-'+this.props.tab.id).each(function(){
+                                const X = Number($(this)[0].style.left.slice(0, -2)) + facX;
+                                const Y = Number($(this)[0].style.top.slice(0, -2)) + facY;
+                                const W = Number($(this)[0].style.width.slice(0, -2)) + facW;
+                                const H = Number($(this)[0].style.height.slice(0, -2)) + facH;
+                                const opacity = Number($(this)[0].style.opacity) + facOPC;
+                                $(this)[0].style.top = Y + "px";
+                                $(this)[0].style.left = X + "px";
+                                $(this)[0].style.width = W + "vw";
+                                $(this)[0].style.height = H + "vh";
+                                $(this)[0].style.opacity = opacity;
+                            });
+                            counter -= 1;
+                            await sleep(sleep_time);
+                        }
+                        this.props.handleMinimize(this.props.tab);
+                    })() }>
                         <i className="fas fa-window-minimize window-header-minimize-icon"></i>
                     </div>&nbsp;
-                    <div className="window-header-maximize" onClick={ this.toggleFullScreen }>
+                    <div className="window-header-maximize" onClick={() => ( async () => {
+                        // animation
+                        var counter = 50, sleep_time = 2;
+                        const facX = this.props.tab.fullscreen ? (this.props.tab.x - 100)/counter : (100 - this.props.tab.x)/counter;
+                        const facY = this.props.tab.fullscreen ? (this.props.tab.y - 0)/counter : (0 - this.props.tab.x)/counter;
+                        const defH = this.props.tab.fullscreen ? this.props.tab.short_height : this.props.tab.full_height, defW = this.props.tab.fullscreen ? this.props.tab.short_width : this.props.tab.full_width;
+                        var facW = 0, facH = 0;
+                        $('#window-'+this.props.tab.id).each(function(){
+                            facW = (defW - Number($(this)[0].style.width.slice(0, -2)))/counter;
+                            facH = (defH - Number($(this)[0].style.height.slice(0, -2)))/counter;
+                        });
+                        while(counter !== 0){
+                            $('#window-'+this.props.tab.id).each(function(){
+                                const X = Number($(this)[0].style.left.slice(0, -2)) + facX;
+                                const Y = Number($(this)[0].style.top.slice(0, -2)) + facY;
+                                const W = Number($(this)[0].style.width.slice(0, -2)) + facW;
+                                const H = Number($(this)[0].style.height.slice(0, -2)) + facH;
+                                $(this)[0].style.top = Y + "px";
+                                $(this)[0].style.left = X + "px";
+                                $(this)[0].style.width = W + "vw";
+                                $(this)[0].style.height = H + "vh";
+                            });
+                            counter -= 1;
+                            await sleep(sleep_time);
+                        }
+                        this.toggleFullScreen();
+                    })() }>
                         <i className="fas fa-plus  window-header-maximize-icon"></i>
                     </div>
                     <div className="window-header-title">{this.props.tab.title}</div>
