@@ -7,30 +7,32 @@ class Settings extends Component {
 
     render() {
 
+        var bgimages = [];
+        for(var i in BackgroundImages){
+            const idx = i;
+            bgimages.push(
+                <div className="setting-bg-image">
+                    <img src={BackgroundImages[idx]} alt="" key={idx} style={{ height: "100%", width: "100%", objectFit: "contain", borderRadius: "1vh", ...( CONSTANTS.bgidx === Number(idx) ? { border: "3px solid rgb(101, 101, 255)" }: {} )}} onClick={ () => { CONSTANTS.bgidx = Number(idx); this.props.changeBackground() } } />
+                </div>
+            )
+        }
+
         return (
             <div id="setting">
+                <div id="setting-header1-changeTheme">
+                    Change Theme    
+                </div>
+                <div id="setting-theme">
+                    <label class="setting-switch">
+                        <input type="checkbox" onChange={ this.props.toggleTheme } />
+                        <span class="setting-slider setting-round"></span>
+                    </label>
+                </div>
                 <div id="setting-header1-changeBackground">
                     Change Background    
                 </div>
-                <div className="setting-bg">
-                    <div className="setting-bg-image">
-                        <img src={BackgroundImages['0']} alt="" key={'0'} style={{ width: "20vh", height: "20vh", borderRadius: "1vh", ...( CONSTANTS.bgidx === 0 ? { border: "5px solid rgb(101, 101, 255)" }: {} )}} onClick={ () => { CONSTANTS.bgidx = 0; this.props.changeBackground() } } />
-                    </div>
-                    <div className="setting-bg-image">
-                        <img src={BackgroundImages['1']} alt="" key={'1'} style={{ width: "20vh", height: "20vh", borderRadius: "1vh", ...( CONSTANTS.bgidx === 1 ? { border: "5px solid rgb(101, 101, 255)" }: {} )}} onClick={ () => { CONSTANTS.bgidx = 1; this.props.changeBackground() } } />
-                    </div>
-                    <div className="setting-bg-image">
-                        <img src={BackgroundImages['2']} alt="" key={'2'} style={{ width: "20vh", height: "20vh", borderRadius: "1vh", ...( CONSTANTS.bgidx === 2 ? { border: "5px solid rgb(101, 101, 255)" }: {} )}} onClick={ () => { CONSTANTS.bgidx = 2; this.props.changeBackground() } } />
-                    </div>
-                    <div className="setting-bg-image">
-                        <img src={BackgroundImages['3']} alt="" key={'3'} style={{ width: "20vh", height: "20vh", borderRadius: "1vh", ...( CONSTANTS.bgidx === 3 ? { border: "5px solid rgb(101, 101, 255)" }: {} )}} onClick={ () => { CONSTANTS.bgidx = 3; this.props.changeBackground() } } />
-                    </div>
-                    <div className="setting-bg-image">
-                        <img src={BackgroundImages['4']} alt="" key={'4'} style={{ width: "20vh", height: "20vh", borderRadius: "1vh", ...( CONSTANTS.bgidx === 4 ? { border: "5px solid rgb(101, 101, 255)" }: {} )}} onClick={ () => { CONSTANTS.bgidx = 4; this.props.changeBackground() } } />
-                    </div>
-                    <div className="setting-bg-image">
-                        <img src={BackgroundImages['5']} alt="" key={'5'} style={{ width: "20vh", height: "20vh", borderRadius: "1vh", ...( CONSTANTS.bgidx === 5 ? { border: "5px solid rgb(101, 101, 255)" }: {} )}} onClick={ () => { CONSTANTS.bgidx = 5; this.props.changeBackground() } } />
-                    </div>
+                <div id="setting-bg">
+                    { bgimages }
                 </div>
             </div>
         );

@@ -115,11 +115,16 @@ class Home extends Component {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
+    toggleTheme = () => {
+        CONSTANTS.light = !CONSTANTS.light;
+        this.setState({});
+    }
+
     render() {
         var items = [];
         for(var tab in Tabs){
             if(Tabs[tab].vis) {
-                items.push(<Window key={tab} tab={ Tabs[tab] } handleClose={ this.handleClose } handleMinimize={ this.handleMinimize } changeBackground = { this.props.changeBackground } handelAnimation = { this.handelAnimation } />)
+                items.push(<Window key={tab} tab={ Tabs[tab] } handleClose={ this.handleClose } handleMinimize={ this.handleMinimize } changeBackground = { this.props.changeBackground } handelAnimation = { this.handelAnimation } toggleTheme = { this.toggleTheme } />)
             }
         }
 

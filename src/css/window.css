@@ -1,6 +1,5 @@
 .window {
   position: absolute;
-  background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
   overflow: hidden;
@@ -9,7 +8,6 @@
 .window-header {
   padding: 0.5vw;
   display: flex;
-  background-color: #d3d3d3;
   height: 4vh;
   cursor: default;
 }

@@ -34,5 +34,6 @@ export const Icons = {
 
 export const CONSTANTS = {
     idxcount: 3,
-    bgidx: 0
+    bgidx: 0,
+    light: true
 }

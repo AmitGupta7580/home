@@ -58,7 +58,7 @@ class TabBody extends Component {
                 )
             case Tabs.SETTING:
                 return (
-                    <Settings fullscreen={ this.props.fullscreen } changeBackground={ this.props.changeBackground } />
+                    <Settings fullscreen={ this.props.fullscreen } changeBackground={ this.props.changeBackground } toggleTheme = { this.props.toggleTheme } />
                 )
             case Tabs.TRASH:
                 return (
@@ -138,8 +138,8 @@ class Window extends Component {
 
     render() {
         return (
-            <div className="window" id={"window-" + this.props.tab.id} style={{ ...(this.props.tab.fullscreen ? { top: '0px', left: '100px', width: this.props.tab.full_width + "vw", height: this.props.tab.full_height + "vh"} : { top: this.props.tab.y + 'px', left: this.props.tab.x + 'px', width: this.props.tab.short_width + "vw", height: this.props.tab.short_height + "vh" }), zIndex: this.props.tab.zIndex, opacity: this.props.tab.opacity }}>
-                <div className="window-header" onMouseDown={ this.dragMouseDown }>
+            <div className="window" id={"window-" + this.props.tab.id} style={{ ...(this.props.tab.fullscreen ? { top: '0px', left: '100px', width: this.props.tab.full_width + "vw", height: this.props.tab.full_height + "vh"} : { top: this.props.tab.y + 'px', left: this.props.tab.x + 'px', width: this.props.tab.short_width + "vw", height: this.props.tab.short_height + "vh" }), zIndex: this.props.tab.zIndex, opacity: this.props.tab.opacity, ...(CONSTANTS.light ? {backgroundColor: "#f1f1f1" } : {backgroundColor: "#2e3133" } ) }}>
+                <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ ...(CONSTANTS.light ? {backgroundColor: "#d3d3d3" } : {backgroundColor: "#2e3133" } ) }}>
                     <div className="window-header-close" onClick={ () => this.props.handleClose(this.props.tab) }>
                         <i className="fas fa-times window-header-close-icon"></i>
                     </div>&nbsp;
@@ -175,7 +175,7 @@ class Window extends Component {
                     <div className="window-header-title">{this.props.tab.title}</div>
                 </div>
                 {/* Body of each tab */}
-                <TabBody tab={ this.props.tab } fullscreen={ this.props.tab.fullscreen } changeBackground={this.props.changeBackground } />
+                <TabBody tab={ this.props.tab } fullscreen={ this.props.tab.fullscreen } changeBackground={this.props.changeBackground } toggleTheme = { this.props.toggleTheme } />
             </div>
         )       
     }
