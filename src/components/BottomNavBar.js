@@ -28,7 +28,7 @@ class BottomBar extends Component {
         const items = [];
         for(var icon in Icons){
             const tab = Tabs[icon];
-            items.push(<BottomBarItem key={icon} icon={Icons[icon]} handleClick={() => props.handleClick(tab)} />)
+            items.push(<BottomBarItem key={icon} icon={Icons[icon]} handleClick={ async () => await props.handleClick(tab)} />)
         }
         this.state = { 
             items: items,
