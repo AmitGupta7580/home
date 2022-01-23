@@ -1,7 +1,14 @@
-.setting-small-bg {
-    display: flex;
+#setting {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.setting-small-bg-image {
-    margin-left: 5vh;
+.setting-bg {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.setting-bg-image {
+    margin-top: 5vh;
+    margin-left: 5%;
 }

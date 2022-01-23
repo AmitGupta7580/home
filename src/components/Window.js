@@ -151,8 +151,8 @@ class Window extends Component {
                     <div className="window-header-minimize" onClick={ () => ( async () => {
                         // animation
                         var counter = 50, sleep_time = 2;
-                        const facX = ((window.innerWidth*(25 + (4.3)*this.props.tab.id))/100 - this.props.tab.x)/counter;
-                        const facY = (window.innerHeight - this.props.tab.y)/counter;
+                        const facX = this.props.tab.fullscreen ? ((window.innerWidth*(25 + (4.3)*this.props.tab.id))/100 - 100)/counter : ((window.innerWidth*(25 + (4.3)*this.props.tab.id))/100 - this.props.tab.x)/counter;
+                        const facY = this.props.tab.fullscreen ? (window.innerHeight)/counter : (window.innerHeight - this.props.tab.y)/counter;
                         var facW = 0, facH = 0;
                         $('#window-'+this.props.tab.id).each(function(){
                             facW = (0 - Number($(this)[0].style.width.slice(0, -2)))/counter;
@@ -183,7 +183,7 @@ class Window extends Component {
                         // animation
                         var counter = 50, sleep_time = 2;
                         const facX = this.props.tab.fullscreen ? (this.props.tab.x - 100)/counter : (100 - this.props.tab.x)/counter;
-                        const facY = this.props.tab.fullscreen ? (this.props.tab.y - 0)/counter : (0 - this.props.tab.x)/counter;
+                        const facY = this.props.tab.fullscreen ? (this.props.tab.y - 0)/counter : (0 - this.props.tab.y)/counter;
                         const defH = this.props.tab.fullscreen ? this.props.tab.short_height : this.props.tab.full_height, defW = this.props.tab.fullscreen ? this.props.tab.short_width : this.props.tab.full_width;
                         var facW = 0, facH = 0;
                         $('#window-'+this.props.tab.id).each(function(){

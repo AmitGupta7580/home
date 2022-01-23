@@ -2,7 +2,7 @@ import bgimage1 from '../images/bgimage.jpg';
 import bgimage2 from '../images/bgimage2.jpg';
 import bgimage3 from '../images/bgimage3.jpg';
 
-export const BackgroundImages = [bgimage1, bgimage2, bgimage3];
+export const BackgroundImages = [bgimage1, bgimage2, bgimage3, bgimage3, bgimage3, bgimage3];
 
 export const Tabs = {
     ABOUT : {id: 1, open: true, vis: true, x: 425, y: 100, fullscreen: false, short_width: 40, full_width: 90,short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "About | Amit Gupta"},

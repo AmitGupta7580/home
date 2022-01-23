@@ -3,11 +3,59 @@ import { about } from '../data/about';
 
 import '../css/about.css';
 import profile from '../images/profile.jpg'
+import { Tabs } from './Data';
 
 class About extends Component {
+
+    tab = Tabs.ABOUT;
+
+    constructor(props) {
+        super(props);
+        this.state = { ...(this.props.fullscreen ? { width: this.tab.full_width, height: this.tab.full_height } : { width: this.tab.short_width, height: this.tab.short_height }) };
+    }
+
+    render() {
+        return (
+            <div id="about">
+                <div id="about-shortdes">
+                    <div id="about-avtar">
+                        <div style={{ width: "25%" }}></div>
+                        <img src={profile} alt="" style={{ width: "90%", height: "95%"/*, borderRadius: "90%"*/ }} />
+                        <div style={{ width: "25%" }}></div>
+                    </div>
+                    <div id="about-shortdes-des">
+                        { about.NAME } <br/>
+                        { about.DOB } <br/>
+                        { about.EMAIL } <br/>
+                        { about.NATIONALITY } <br/>
+                        { about.LANGUAGES } <br/>
+                    </div>
+                </div>
+                <div style={{ width: "62.5%", height: "100%"}}>
+                    <div id="about-longdes">
+                        { about.DES_TITLE } <br/>
+                        { about.DESCRIPTION } <br/>
+                        { about.EDUCATION["INSTITUTE"] } <br/>
+                        { about.EDUCATION["URL"] } <br/>
+                        { about.EDUCATION["DEGREE"] } <br/>
+                        { about.EDUCATION["FEILD"] } <br/>
+                        { about.AREA_OF_INTEREST } <br/>
+                        { about.DES_TITLE } <br/>
+                        { about.DESCRIPTION } <br/>
+                        { about.EDUCATION["INSTITUTE"] } <br/>
+                        { about.EDUCATION["URL"] } <br/>
+                        { about.EDUCATION["DEGREE"] } <br/>
+                        { about.EDUCATION["FEILD"] } <br/>
+                        { about.AREA_OF_INTEREST } <br/>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    /*
     render() {
         return this.props.fullscreen ? (
-            <div id="about-large">
+            <div id="about">
                 <div id="about-large-shortdes">
                     <div style={{height: "40vh"}}>
                         <div id="about-large-avtar">
@@ -74,6 +122,7 @@ class About extends Component {
             </div>
         );
     }
+    */
 }
 
 export default About;
