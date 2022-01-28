@@ -35,17 +35,17 @@ class About extends Component {
                     <div id="about-longdes">
                         { about.DES_TITLE } <br/>
                         { about.DESCRIPTION } <br/>
-                        { about.EDUCATION["INSTITUTE"] } <br/>
-                        { about.EDUCATION["URL"] } <br/>
-                        { about.EDUCATION["DEGREE"] } <br/>
-                        { about.EDUCATION["FEILD"] } <br/>
+                        { about.EDUCATION[0]["INSTITUTE"] } <br/>
+                        { about.EDUCATION[0]["URL"] } <br/>
+                        { about.EDUCATION[0]["DEGREE"] } <br/>
+                        { about.EDUCATION[0]["FEILD"] } <br/>
                         { about.AREA_OF_INTEREST } <br/>
                         { about.DES_TITLE } <br/>
                         { about.DESCRIPTION } <br/>
-                        { about.EDUCATION["INSTITUTE"] } <br/>
-                        { about.EDUCATION["URL"] } <br/>
-                        { about.EDUCATION["DEGREE"] } <br/>
-                        { about.EDUCATION["FEILD"] } <br/>
+                        { about.EDUCATION[0]["INSTITUTE"] } <br/>
+                        { about.EDUCATION[0]["URL"] } <br/>
+                        { about.EDUCATION[0]["DEGREE"] } <br/>
+                        { about.EDUCATION[0]["FEILD"] } <br/>
                         { about.AREA_OF_INTEREST } <br/>
                     </div>
                 </div>

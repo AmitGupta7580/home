@@ -27,8 +27,8 @@ class Home extends Component {
         const vis = tab.vis;
         if(!tab.open){
             tab.open = true;
-            tab.x = this.randomGenerator(100, 500);
-            tab.y = this.randomGenerator(20, 200);
+            tab.left = this.randomGenerator(8 + (tab.short_width/2), 100 - (tab.short_width/2));
+            tab.top = this.randomGenerator(tab.short_height/2, 90 - (tab.short_height/2));
         }
         if(!tab.vis){
             tab.vis = true;
@@ -39,23 +39,23 @@ class Home extends Component {
         }
         if(!vis){
             // animation
-            const sX = (window.innerWidth*(25 + (4.3)*tab.id))/100;
-            const dX = tab.fullscreen ? 100 : tab.x;
-            const sY = window.innerHeight;
-            const dY = tab.fullscreen ? 0 : tab.y;
-            const dW = tab.fullscreen ? tab.full_width : tab.short_width;
-            const dH = tab.fullscreen ? tab.full_height : tab.short_height;
+            const sX = 50 - ((275 - 50*(tab.id))/window.innerWidth)*100;
+            const dX = tab.fullscreen ? 54 : tab.left;
+            const sY = 100 - (25/window.innerHeight)*100;
+            const dY = tab.fullscreen ? 45 : tab.top;
+            const dW = tab.fullscreen ? 92 : tab.short_width;
+            const dH = tab.fullscreen ? 90 : tab.short_height;
             const sW = 0, sH = 0;
             await this.handelAnimation(tab, sX, dX, sY, dY, sW, dW, sH, dH, 1);
         } else if(vis) {
             // animation
-            const sX = tab.fullscreen ? 100 : tab.x;
-            const dX = (window.innerWidth*(25 + (4.3)*tab.id))/100;
-            const sY = tab.fullscreen ? 0 : tab.y;
-            const dY = window.innerHeight;
+            const sX = tab.fullscreen ? 54 : tab.left;
+            const dX = 50 - ((275 - 50*(tab.id))/window.innerWidth)*100;
+            const sY = tab.fullscreen ? 45 : tab.top;
+            const dY = 100 - (25/window.innerHeight)*100;
             const dW = 0, dH = 0;
-            const sW = tab.fullscreen ? tab.full_width : tab.short_width; 
-            const sH = tab.fullscreen ? tab.full_height : tab.short_height;
+            const sW = tab.fullscreen ? 92 : tab.short_width; 
+            const sH = tab.fullscreen ? 90 : tab.short_height;
             await this.handelAnimation(tab, sX, dX, sY, dY, sW, dW, sH, dH, -1);
             tab.vis = false;
             this.setState({});
@@ -77,10 +77,10 @@ class Home extends Component {
         // setting-intial pos
         await this.sleep(5);
         $('#window-'+tab.id).each(function(){
-            $(this)[0].style.top = sY + "px";
-            $(this)[0].style.left = sX + "px";
-            $(this)[0].style.width = sW + "vw";
-            $(this)[0].style.height = sH + "vh";
+            $(this)[0].style.top = sY + "%";
+            $(this)[0].style.left = sX + "%";
+            $(this)[0].style.width = sW + "%";
+            $(this)[0].style.height = sH + "%";
         })
         // animation
         var counter = 50, sleep_time = 2;
@@ -91,15 +91,15 @@ class Home extends Component {
         const facOPC = opc/counter;
         while(counter !== 0){
             $('#window-'+tab.id).each(function(){
-                const X = Number($(this)[0].style.left.slice(0, -2)) + facX;
-                const Y = Number($(this)[0].style.top.slice(0, -2)) + facY;
-                const W = Number($(this)[0].style.width.slice(0, -2)) + facW;
-                const H = Number($(this)[0].style.height.slice(0, -2)) + facH;
+                const X = Number($(this)[0].style.left.slice(0, -1)) + facX;
+                const Y = Number($(this)[0].style.top.slice(0, -1)) + facY;
+                const W = Number($(this)[0].style.width.slice(0, -1)) + facW;
+                const H = Number($(this)[0].style.height.slice(0, -1)) + facH;
                 const opacity = Number($(this)[0].style.opacity) + facOPC;
-                $(this)[0].style.top = Y + "px";
-                $(this)[0].style.left = X + "px";
-                $(this)[0].style.width = W + "vw";
-                $(this)[0].style.height = H + "vh";
+                $(this)[0].style.top = Y + "%";
+                $(this)[0].style.left = X + "%";
+                $(this)[0].style.width = W + "%";
+                $(this)[0].style.height = H + "%";
                 $(this)[0].style.opacity = opacity;
             });
             counter -= 1;
@@ -130,7 +130,7 @@ class Home extends Component {
 
         return (
         <>
-            <div className='w3-container'>
+            <div>
                 <tbody>{items}</tbody>
             </div>
             <BottomBar handleClick={ this.handelOpen }/>

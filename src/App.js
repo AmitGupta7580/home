@@ -29,7 +29,6 @@ class App extends Component {
     return (
       <div style={ bodyStyle }>
         <LinkBar/>
-        {/* <WelcomeIntro/> */}
         <Home changeBackground={ this.changeBackground }/>
       </div>
     );

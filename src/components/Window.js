@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import { CONSTANTS, Tabs } from './Data';
 import About from './About';
-import Education from './Education';
 import Experience from './Experience';
 import Project from './Project';
 import Achievements from './Achievements';
@@ -23,10 +22,6 @@ class TabBody extends Component {
             case Tabs.ABOUT:
                 return (
                     <About fullscreen={ this.props.fullscreen } />
-                )
-            case Tabs.EDUCATION:
-                return (
-                    <Education fullscreen={ this.props.fullscreen } />
                 )
             case Tabs.EXPERIENCE:
                 return (
@@ -126,8 +121,8 @@ class Window extends Component {
         this.pos2 = this.pos4 - e.clientY;
         this.pos3 = e.clientX;
         this.pos4 = e.clientY;
-        this.props.tab.y = (this.props.tab.y - this.pos2);
-        this.props.tab.x = (this.props.tab.x - this.pos1);
+        this.props.tab.top = this.props.tab.top - (this.pos2/window.innerHeight)*100;
+        this.props.tab.left = this.props.tab.left - (this.pos1/window.innerWidth)*100;
         this.setState({});
     }
 
@@ -138,20 +133,20 @@ class Window extends Component {
 
     render() {
         return (
-            <div className="window" id={"window-" + this.props.tab.id} style={{ ...(this.props.tab.fullscreen ? { top: '0px', left: '100px', width: this.props.tab.full_width + "vw", height: this.props.tab.full_height + "vh"} : { top: this.props.tab.y + 'px', left: this.props.tab.x + 'px', width: this.props.tab.short_width + "vw", height: this.props.tab.short_height + "vh" }), zIndex: this.props.tab.zIndex, opacity: this.props.tab.opacity, ...(CONSTANTS.light ? {backgroundColor: "#f1f1f1" } : {backgroundColor: "#2e3133" } ) }}>
-                <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ ...(CONSTANTS.light ? {backgroundColor: "#d3d3d3" } : {backgroundColor: "#2e3133" } ) }}>
+            <div className="window" id={"window-" + this.props.tab.id} style={{ ...(this.props.tab.fullscreen ? { top: '45%', left: '54%', width: "92%", height: "90%"} : { top: this.props.tab.top + '%', left: this.props.tab.left + '%', width: this.props.tab.short_width + "%", height: this.props.tab.short_height + "%" }), transform: "translate(-50%, -50%)" ,zIndex: this.props.tab.zIndex, opacity: this.props.tab.opacity, ...(CONSTANTS.light ? {backgroundColor: "#f1f1f1" } : {backgroundColor: "#2e3133" }) }}>
+                <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ ...(CONSTANTS.light ? {backgroundColor: "#d3d3d3" } : {backgroundColor: "#2e3133", color: "white" }) }}>
                     <div className="window-header-close" onClick={ () => this.props.handleClose(this.props.tab) }>
                         <i className="fas fa-times window-header-close-icon"></i>
                     </div>&nbsp;
                     <div className="window-header-minimize" onClick={ () => ( async () => {
                         // animation
-                        const sX = this.props.tab.fullscreen ? 100 : this.props.tab.x;
-                        const dX = (window.innerWidth*(25 + (4.3)*this.props.tab.id))/100;
-                        const sY = this.props.tab.fullscreen ? 0 : this.props.tab.y;
-                        const dY = window.innerHeight;
+                        const sX = this.props.tab.fullscreen ? 54 : this.props.tab.left;
+                        const dX = 50 - ((275 - 50*(this.props.tab.id))/window.innerWidth)*100;
+                        const sY = this.props.tab.fullscreen ? 45 : this.props.tab.top;
+                        const dY = 100 - (25/window.innerHeight)*100;
                         const dW = 0, dH = 0;
-                        const sW = this.props.tab.fullscreen ? this.props.tab.full_width : this.props.tab.short_width; 
-                        const sH = this.props.tab.fullscreen ? this.props.tab.full_height : this.props.tab.short_height;
+                        const sW = this.props.tab.fullscreen ? 92 : this.props.tab.short_width; 
+                        const sH = this.props.tab.fullscreen ? 90 : this.props.tab.short_height;
                         await this.props.handelAnimation(this.props.tab, sX, dX, sY, dY, sW, dW, sH, dH, -1);
                         this.props.handleMinimize(this.props.tab);
                     })() }>
@@ -159,14 +154,14 @@ class Window extends Component {
                     </div>&nbsp;
                     <div className="window-header-maximize" onClick={() => ( async () => {
                         // animation
-                        const sX = this.props.tab.fullscreen ? 100 : this.props.tab.x;
-                        const dX = this.props.tab.fullscreen ? this.props.tab.x : 100;
-                        const sY = this.props.tab.fullscreen ? 0 : this.props.tab.y;
-                        const dY = this.props.tab.fullscreen ? this.props.tab.y : 0;
-                        const dW = this.props.tab.fullscreen ? this.props.tab.short_width : this.props.tab.full_width;
-                        const dH = this.props.tab.fullscreen ? this.props.tab.short_height : this.props.tab.full_height;
-                        const sW = this.props.tab.fullscreen ? this.props.tab.full_width : this.props.tab.short_width; 
-                        const sH = this.props.tab.fullscreen ? this.props.tab.full_height : this.props.tab.short_height;
+                        const sX = this.props.tab.fullscreen ? 54 : this.props.tab.left;
+                        const dX = this.props.tab.fullscreen ? this.props.tab.left : 54;
+                        const sY = this.props.tab.fullscreen ? 45 : this.props.tab.top;
+                        const dY = this.props.tab.fullscreen ? this.props.tab.top : 45;
+                        const dW = this.props.tab.fullscreen ? this.props.tab.short_width : 92;
+                        const dH = this.props.tab.fullscreen ? this.props.tab.short_height : 90;
+                        const sW = this.props.tab.fullscreen ? 92 : this.props.tab.short_width; 
+                        const sH = this.props.tab.fullscreen ? 90 : this.props.tab.short_height;
                         await this.props.handelAnimation(this.props.tab, sX, dX, sY, dY, sW, dW, sH, dH, 0);
                         this.toggleFullScreen();
                     })() }>

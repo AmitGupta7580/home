@@ -9,10 +9,27 @@ export const about = {
     'AREA_OF_INTEREST': [
         'Competitive Coding', 'Autonomous vehicles', 'Exploiting Machine', 'Quantum Computing', 'Cryptography'
     ],
-    "EDUCATION": {
+    "EDUCATION": [{
         "INSTITUTE": "Motilal Nehru National Institute of Technology (MNNIT), Allahabad",
         "URL": "http://www.mnnit.ac.in/",
         "FEILD": "Computer Science Engineering",
-        "DEGREE": "Bachelor of Technology"
-    },
+        "DEGREE": "Bachelor of Technology",
+        "GRADE": "8.44/10",
+        "START_DATE": "",
+        "END_DATA": "",
+    },{
+        "INSTITUTE": "St. Vivekanand International School, Sikandrabad",
+        "URL": "",
+        "DEGREE": "",
+        "GRADE": "90.0/100",
+        "START_DATE": "",
+        "END_DATA": "",
+    },{
+        "INSTITUTE": "Delhi Public School, Bulandshahr",
+        "URL": "",
+        "DEGREE": "",
+        "GRADE": "96.0/100",
+        "START_DATE": "",
+        "END_DATA": "",
+    }],
 }
