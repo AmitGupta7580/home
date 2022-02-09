@@ -25,7 +25,7 @@ class BottomBar extends Component {
     //margin-left: 37.5vw; /* (100 - 6*no.of*items)/2 = 70/2 = 35 */
     constructor(props) {
         super(props);
-        const items = [], left = (window.innerWidth - 50*(Object.keys(Icons).length))/2;
+        const items = [], left = Math.max(0, (window.innerWidth - 50*(Object.keys(Icons).length))/2);
         var hintleft = 25;
         for(var icon in Icons){
             const tab = Tabs[icon];

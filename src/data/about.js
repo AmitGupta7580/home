@@ -15,21 +15,21 @@ export const about = {
         "FEILD": "Computer Science Engineering",
         "DEGREE": "Bachelor of Technology",
         "GRADE": "8.44/10",
-        "START_DATE": "",
+        "START_DATE": "August-2019",
         "END_DATA": "",
     },{
         "INSTITUTE": "St. Vivekanand International School, Sikandrabad",
         "URL": "",
         "DEGREE": "",
         "GRADE": "90.0/100",
-        "START_DATE": "",
-        "END_DATA": "",
+        "START_DATE": "April-2018",
+        "END_DATA": "March-2019",
     },{
         "INSTITUTE": "Delhi Public School, Bulandshahr",
         "URL": "",
         "DEGREE": "",
         "GRADE": "96.0/100",
-        "START_DATE": "",
-        "END_DATA": "",
-    }],
+        "START_DATE": "April-2016",
+        "END_DATA": "March-2017",
+    }]
 }

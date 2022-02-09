@@ -14,7 +14,7 @@ export const Tabs = {
     WRITEUP : {id: 8, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 50, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Writeups | Amit Gupta"},
     GAME : {id: 9, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Games"},
     SETTING : {id: 10, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Settings"},
-    TRASH : {id: 11, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Trash"},
+    // TRASH : {id: 11, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Trash"},
 };
 
 export const Icons = {
@@ -27,7 +27,7 @@ export const Icons = {
     WRITEUP : {class: 'fas fa-edit', bgColor: 'rgb(34, 173, 115)', color: 'white', transform: '30%, 5%', hint: 'Writeups'},
     GAME : {class: 'fas fa-gamepad', bgColor: 'rgb(36, 52, 201)', color: 'white', transform: '17%, 5%', hint: 'Games'},
     SETTING : {class: 'fas fa-cogs', bgColor: 'white', color: 'rgb(110, 105, 105)', transform: '20%, 8%', hint: 'Settings'},
-    TRASH : {class: 'fas fa-trash', bgColor: 'white', color: 'black', transform: '45%, 5%', hint: 'Trash'}
+    // TRASH : {class: 'fas fa-trash', bgColor: 'white', color: 'black', transform: '45%, 5%', hint: 'Trash'}
 }
 
 export const CONSTANTS = {

@@ -9,8 +9,6 @@ import Blog from './Blog';
 import Writeup from './Writeup';
 import Games from './Games';
 import Settings from './Settings';
-import Trash from './Trash';
-import $ from 'jquery';
 
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
 import '../css/w3.css';
@@ -54,10 +52,6 @@ class TabBody extends Component {
             case Tabs.SETTING:
                 return (
                     <Settings fullscreen={ this.props.fullscreen } changeBackground={ this.props.changeBackground } toggleTheme = { this.props.toggleTheme } />
-                )
-            case Tabs.TRASH:
-                return (
-                    <Trash fullscreen={ this.props.fullscreen } />
                 )
             default:
                 console.log("Invalid Tab");

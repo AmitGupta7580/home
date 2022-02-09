@@ -6,6 +6,8 @@
     border-radius: 10px;
     bottom:2px;
     width: auto;
+    height: 50px;
+    display: flex;
 }
 
 .bottom-bar-item {
