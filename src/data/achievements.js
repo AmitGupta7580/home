@@ -19,5 +19,25 @@ export const achievements = [
         "title": "2nd in Guardian",
         "date": "2020-10-05",
         "awarder": "College"
+    },
+    {
+        "title": "5* on Codechef",
+        "date": "2020-10-05",
+        "awarder": "Codechef"
+    },
+    {
+        "title": "Top 10 in Devjam and Droidrush",
+        "date": "2020-10-05",
+        "awarder": "College"
+    },
+    {
+        "title": "Expert on Codeforces",
+        "date": "2020-10-05",
+        "awarder": "Codeforces"
+    },
+    {
+        "title": "Top 20 in India on CTFTime",
+        "date": "2020-10-05",
+        "awarder": "CTFTime"
     }
 ]
