@@ -15,7 +15,9 @@
 }
 
 .project-tab-list {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     border-radius: 27px;
     border: 1px solid rgb(146, 146, 146);
     line-height: 0;
@@ -39,5 +41,130 @@
 }
 
 #projects {
-    
+    height: 100%;
+    width: 100%;
+    margin-top: 2%;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects-tiel {
+    flex: 0 0 365px;
+}
+
+.projects-tiel figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 5%;
+}
+
+.projects-tiel figure img {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.projects-tiel figure figcaption #projects-tiel-code {
+    font-size: 18px;
+    position: absolute;
+    right: 5%;
+}
+
+.projects-tiel figure figcaption #projects-tiel-link {
+    font-size: 18px;
+    position: absolute;
+    right: 15%;
+}
+
+.projects-tiel figure figcaption #projects-tiel-video {
+    font-size: 18px;
+    position: absolute;
+    right: 25%;
+}
+
+.projects-tiel figure figcaption h4 {
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 2%;
+}
+
+.projects-tiel figure figcaption p {
+    font-size: 13px;
+    margin-top: 30px;
+    padding-left: 2%;
+}
+
+.projects-tiel figure figcaption #projects-tiel-tech {
+    display: flex;
+    justify-content: left;
+    /* font-size: 18px;
+    position: absolute;
+    right: 5%; */
+}
+
+.projects-tiel figure:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: all .4s ease-in-out; 
+}
+
+.projects-tiel figure:hover:before {
+    opacity: .7; 
+}
+
+.projects-tiel figure:hover figcaption h4, .projects-tiel figure:hover figcaption p, .projects-tiel figure:hover figcaption #projects-tiel-code, .projects-tiel figure:hover figcaption #projects-tiel-link, .projects-tiel figure:hover figcaption #projects-tiel-video, .projects-tiel figure:hover figcaption #projects-tiel-tech {
+    opacity: 1;
+    transition: all .4s ease-in-out;
+}
+
+.projects-tiel figure figcaption {
+    position: absolute;
+    top: 15%;
+    color: #fff; 
+}
+
+.projects-tiel figure figcaption h4, .projects-tiel figure figcaption p, .projects-tiel figure figcaption #projects-tiel-code, .projects-tiel figure figcaption #projects-tiel-link, .projects-tiel figure figcaption #projects-tiel-video, .projects-tiel figure figcaption #projects-tiel-tech {
+    opacity: 0;
+    color: #fff;
+    transition: all .1s ease-in; 
+}
+
+.projects-tiel-tech-tag:before {
+    content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-right: 8px solid red;
+	position: absolute;
+	top: 50%;
+	/* margin-top: -9px;  */
+    transform: translateY(-50%);
+	right: 100%;
+	z-index: 2; 
+}
+
+.projects-tiel-tech-tag {
+    margin-left: 15px;
+    background-color: red;
+    text-decoration: none; 
+    text-transform: uppercase;
+    padding: 1px 4px 1px 2px;
+    position: relative; 
+    display: block;
+    float: left;
+    position:relative;
+    font-size: 10px;
+    height: 16px;
 }

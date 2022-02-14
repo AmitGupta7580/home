@@ -73,6 +73,7 @@ class Project extends Component {
                     {this.state.filtered_projects.map((project) => {
                         return <ProjectTiel project={project}></ProjectTiel>
                     })}
+                    <div style={{ width: "100%", height: "30%" }}></div> {/* for correct scrolling */}
                 </div>
             </div>
         )

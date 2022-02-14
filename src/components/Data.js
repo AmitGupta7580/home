@@ -5,9 +5,9 @@ import bgimage3 from '../images/bgimage3.jpg';
 export const BackgroundImages = [bgimage1, bgimage2, bgimage3, bgimage3, bgimage3, bgimage3];
 
 export const Tabs = {
-    ABOUT : {id: 1, open: true, vis: false, left: 50, top: 50, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "About | Amit Gupta"},
+    ABOUT : {id: 1, open: true, vis: true, left: 50, top: 50, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "About | Amit Gupta"},
     EXPERIENCE : {id: 2, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Experience | Amit Gupta"},
-    PROJECT : {id: 3, open: true, vis: true, left: 50, top: 50, fullscreen: false, short_width: 55, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Projects | Amit Gupta"},
+    PROJECT : {id: 3, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 55, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Projects | Amit Gupta"},
     ACHIEVEMENTS : {id: 4, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Achievements | Amit Gupta"},
     VOLUNTEER : {id: 5, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 40, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Volunteer | Amit Gupta"},
     BLOG : {id: 6, open: false, vis: false, left: 0, top: 0, fullscreen: false, short_width: 50, short_height: 64, full_height: 90, zIndex: 0, opacity: 1, title: "Blogs | Amit Gupta"},
