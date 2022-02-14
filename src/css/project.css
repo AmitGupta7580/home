@@ -1,0 +1,43 @@
+#project {
+    height: 96%;
+}
+
+#project-branch-switch {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+#project-major-minor-switch {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-tab-list {
+    display: inline-block;
+    border-radius: 27px;
+    border: 1px solid rgb(146, 146, 146);
+    line-height: 0;
+}
+
+.project-tab-list-item {
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    padding: 20px 20px;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.project-tab-list-active {
+    background-color: #2e3133;
+    -webkit-border-radius: 27px;
+    border-radius: 27px;
+    color: #f1f1f1; 
+}
+
+#projects {
+    
+}

@@ -109,7 +109,7 @@ export const projects = [
             "JavaScript",
         ],
         "KEYWORDS": ["QUANTUM CIRCUITS", "JS"],
-        "BRANCH": ["QUANTUM COMPUTING", "WEB"],
+        "BRANCH": ["QUANTUM", "WEB"],
         "TYPE": "MAJOR"
     }, {
         "NAME": "Hex-It",

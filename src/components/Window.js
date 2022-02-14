@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { CONSTANTS, Tabs } from './Data';
 import About from './About';
 import Experience from './Experience';
-import Project from './Project';
+import Project from './project/Project';
 import Achievements from './Achievements';
 import Volunteer from './Volunteer';
 import Blog from './Blog';
