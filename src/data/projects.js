@@ -20,12 +20,11 @@ export const projects = [
         "CODE": "https://github.com/AmitGupta7580/AmitGupta7580.github.io",
         "VIDEO": "",
         "TECH": [
-            "JavaScript",
             "ReactJS", 
             "GH-PAGES",
+            "CSS-Animations"
         ],
-        "KEYWORDS": ["REACTJS"],
-        "BRANCH": ["WEB"],
+        "BRANCH": ["REACTJS", "WEB"],
         "TYPE": "MAJOR"
     }, {
         "NAME": "Session Manager",
@@ -34,8 +33,7 @@ export const projects = [
         "LINK": "",
         "CODE": "https://github.com/AmitGupta7580/Session-Manager",
         "VIDEO": "",
-        "TECH": ["JavaScript"],
-        "KEYWORDS": ["JS"],
+        "TECH": ["JS", "Browser"],
         "BRANCH": ["WEB"],
         "TYPE": "MINOR"
     }, {
@@ -45,12 +43,11 @@ export const projects = [
         "LINK": "",
         "CODE": "https://github.com/AmitGupta7580/Roulette-game-Solana-Web3",
         "VIDEO": "",
-        "TECH": [
-            "Javascript", 
-            "Solana", 
+        "TECH": [ 
+            "Solana",
+            "NODEJS" 
         ],
-        "KEYWORDS": ["SOLANA"],
-        "BRANCH": ["BLOCKCHAIN"],
+        "BRANCH": ["BLOCKCHAIN", "NODEJS"],
         "TYPE": "MINOR"
     }, {
         "NAME": "Static Vehicle Avoidance",
@@ -58,13 +55,12 @@ export const projects = [
         "IMAGE": soa,
         "LINK": "",
         "CODE": "https://github.com/AmitGupta7580/Static_vehicle_avoidance_carla",
-        "VIDEO": "",
+        "VIDEO": "https://www.youtube.com/playlist?list=PLvF-o_Kkrx182f--pGoFnpKpGXctXnowy",
         "TECH": [
-            "Carla", 
-            "Semantic Segmentation", 
+            "Carla",
+            "Autonomous Vehicle"
         ],
-        "KEYWORDS": ["ML", "SELF-DRIVING CAR"],
-        "BRANCH": ["ROBOTICS"],
+        "BRANCH": ["ROBOTICS", "ML"],
         "TYPE": "MAJOR"
     }, {
         "NAME": "Voice Call CLI",
@@ -76,10 +72,6 @@ export const projects = [
         "TECH": [
             "Java", 
             "Azure",
-        ],
-        "KEYWORDS": [
-            "JAVA", 
-            "AZURE",
         ],
         "BRANCH": ["JAVA", "CLOUD"],
         "TYPE": "MINOR"
@@ -94,7 +86,6 @@ export const projects = [
             "Airsim", 
             "Android",
         ],
-        "KEYWORDS": ["ANDROID"],
         "BRANCH": ["ANDROID"],
         "TYPE": "MINOR"
     }, {
@@ -103,12 +94,11 @@ export const projects = [
         "IMAGE": quantum_simulator,
         "LINK": "http://quantum-simulator-project.herokuapp.com/",
         "CODE": "https://github.com/AmitGupta7580/Quantum_Simulator",
-        "VIDEO": "",
+        "VIDEO": "https://www.youtube.com/watch?v=5vrRHhoa0vg",
         "TECH": [
             "Quantum Circuits", 
-            "JavaScript",
+            "JS",
         ],
-        "KEYWORDS": ["QUANTUM CIRCUITS", "JS"],
         "BRANCH": ["QUANTUM", "WEB"],
         "TYPE": "MAJOR"
     }, {
@@ -119,7 +109,6 @@ export const projects = [
         "CODE": "https://github.com/AmitGupta7580/Hex-It",
         "VIDEO": "",
         "TECH": ["JAVA"],
-        "KEYWORDS": ["JAVA"],
         "BRANCH": ["JAVA"],
         "TYPE": "MINOR"
     }, {
@@ -130,7 +119,6 @@ export const projects = [
         "CODE": "https://github.com/AmitGupta7580/Facebook_Bot",
         "VIDEO": "",
         "TECH": ["Python"],
-        "KEYWORDS": ["PYTHON"],
         "BRANCH": ["WEB"],
         "TYPE": "MINOR"
     }, {
@@ -141,11 +129,10 @@ export const projects = [
         "CODE": "https://github.com/AmitGupta7580/MNNITians_any_query",
         "VIDEO": "",
         "TECH": [
-            "Php", 
-            "Javascript", 
+            "PHP", 
+            "JS", 
             "SOL"
         ],
-        "KEYWORDS": ["PHP", "JS", "SQL"],
         "BRANCH": ["WEB"],
         "TYPE": "MAJOR"
     }, {
@@ -160,10 +147,7 @@ export const projects = [
             "Firebase", 
             "Dart"
         ],
-        "KEYWORDS": [
-            "FLUTTER", "FIREBASE"
-        ],
-        "BRANCH": ["ANDROID", "FLUTTER"],
+        "BRANCH": ["FLUTTER"],
         "TYPE": "MAJOR"
     }, {
         "NAME": "Byakugan",
@@ -178,10 +162,7 @@ export const projects = [
             "Dart",
             "NodeJS"
         ],
-        "KEYWORDS": [
-            "FLUTTER", "FIREBASE", "NODEJS"
-        ],
-        "BRANCH": ["ANDROID", "FLUTTER", "WEB"],
+        "BRANCH": ["FLUTTER", "NODEJS", "WEB"],
         "TYPE": "MINOR"
     }
 ]

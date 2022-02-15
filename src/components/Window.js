@@ -83,17 +83,6 @@ class Window extends Component {
         this.setState({});
     }
 
-    toggleTheme = () => {
-        if(this.state.theme === 'light') {
-            // functions to change the theme
-            const theme = 'dark';
-            this.setState({ theme: theme });
-        } else {
-            const theme = 'light';
-            this.setState({ theme: theme });
-        }
-    }  // feature in settings to change the theme
-
     dragMouseDown = (e) => {
         if(this.props.tab.zIndex !== CONSTANTS.idxcount){
             CONSTANTS.idxcount += 1;
