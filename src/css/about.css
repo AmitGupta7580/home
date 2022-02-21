@@ -18,9 +18,14 @@
 #about-shortdes-des {
     height: 100%;
     padding: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 #about-longdes {
+    display: flex;
+    flex-direction: column;
     margin-top: 2%;
     height: 95%;
     width: 100%;
@@ -28,4 +33,32 @@
     background-color: #d3d3d3;
     overflow-x: hidden;
     overflow-y: scroll;
+}
+
+.about-longdes-heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 120%;
+}
+
+.about-longdes-heading h5 {
+    display: inline;
+    border-bottom: 1px solid black;
+}
+
+.about-longdes-list {
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-longdes-list-item {
+    background-color: #2e3133;
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
 }

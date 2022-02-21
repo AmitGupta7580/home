@@ -5,7 +5,6 @@ import { CONSTANTS, Tabs } from './Data';
 import $ from 'jquery';
 
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
-import '../css/w3.css';
 
 class Home extends Component {
 

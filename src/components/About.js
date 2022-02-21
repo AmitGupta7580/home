@@ -12,35 +12,58 @@ class About extends Component {
     render() {
 
         return (
-            <div id="about">
+            <div id="about" className="w3-monospace">
                 <div id="about-shortdes">
                     <div id="about-avtar">
                         <img src={profile} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", borderRadius: "100%", margin: "auto" }} />
                     </div>
                     <div id="about-shortdes-des">
-                        { about.NAME } <br/>
-                        { about.DOB } <br/>
-                        { about.EMAIL } <br/>
-                        { about.NATIONALITY } <br/>
-                        { about.LANGUAGES } <br/>
+                        <div style={{ fontSize: "150%" }}><b>{ about.NAME }</b></div>
+                        <div>{ about.DOB }</div>
+                        <div style={{ height: "3%" }}></div>
+                        <div style={{ whiteSpace: 'pre' }}>{ about.RESIDENCE }</div>
                     </div>
                 </div>
                 <div style={{ width: "62.5%", height: "100%"}}>
                     <div id="about-longdes">
-                        { about.DES_TITLE } <br/>
-                        { about.DESCRIPTION } <br/>
-                        { about.EDUCATION[0]["INSTITUTE"] } <br/>
-                        { about.EDUCATION[0]["URL"] } <br/>
-                        { about.EDUCATION[0]["DEGREE"] } <br/>
-                        { about.EDUCATION[0]["FEILD"] } <br/>
-                        { about.AREA_OF_INTEREST } <br/>
-                        { about.DES_TITLE } <br/>
-                        { about.DESCRIPTION } <br/>
-                        { about.EDUCATION[0]["INSTITUTE"] } <br/>
-                        { about.EDUCATION[0]["URL"] } <br/>
-                        { about.EDUCATION[0]["DEGREE"] } <br/>
-                        { about.EDUCATION[0]["FEILD"] } <br/>
-                        { about.AREA_OF_INTEREST } <br/>
+                        <div style={{ fontSize: "130%" }}><b>{ about.DES_TITLE }</b></div>
+                        <div>{ about.DESCRIPTION }</div>
+                        <div className="about-longdes-heading" >
+                            <h5>EDUCATION</h5>
+                        </div>
+                        { about.EDUCATION.map((edu) => {
+                            return (
+                                <div style={{ marginBottom: "2%" }}>
+                                    <div style={{ display: "flex" }}>
+                                        <div style={{ width: "25px", height: "25px", borderRadius: "25px", backgroundColor: "white", textAlign: "center" }}>
+                                            { edu.URL !== "" && <a href={ edu.URL }><i className="fas fa-university"></i></a>}
+                                            { edu.URL === "" && <i className="fas fa-university"></i>}
+                                        </div>
+                                        &nbsp;&nbsp;<b>{ edu.DEGREE }</b>
+                                    </div>
+                                    <div style={{ position: "relative", left: "12px", borderLeft: "2px solid grey", paddingLeft: "25px" }}>
+                                        { edu.INSTITUTE } <br/>
+                                        ( { edu.GRADE } )
+                                    </div>
+                                </div>
+                            )
+                        }) }
+                        <div className="about-longdes-heading" >
+                            <h5>AREA OF INTREST</h5>
+                        </div>
+                        <div className="about-longdes-list">
+                            { about.AREA_OF_INTEREST.map((field) => {
+                                return <div className="about-longdes-list-item">{ field }</div>
+                            }) }
+                        </div>
+                        <div className="about-longdes-heading" >
+                            <h5>KNOWN LANGUAGES</h5>
+                        </div>
+                        <div className="about-longdes-list">
+                            { about.LANGUAGES.map((field) => {
+                                return <div className="about-longdes-list-item">{ field }</div>
+                            }) }
+                        </div>
                     </div>
                 </div>
             </div>
