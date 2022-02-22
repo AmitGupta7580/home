@@ -1,36 +1,38 @@
+import drdo from '../images/drdo.png';
+import tsaw from '../images/tsaw.png';
+
 export const experience = [
     {
         "NAME": "Institute of Systems Studies and Analyses, DRDO",
         "POSITION": "Software Intern",
         "ORG_URL": "https://www.drdo.gov.in/labs-and-establishments/institute-systems-studies-analyses-issa",
-        "START_DATE": "2021-01-04",
-        "END_DATE": "2021-02-25",
+        "DURATION": "( 4th January 2021 - 25th Feburary 2021 )",
         "HIGHLIGHTS": [
             "Web Application to automate the AHP process", 
             "Features of multiple experts on a single project", 
             "Save the contribution in real-time"
         ],
         "TECHNOLOGIES": [
-            "NodeJs (Backend)",
-            "MongoDB, Firebase (Database)",
-            "HTML, CSS, Vanila JS, Chart.js (Frontend)"
+            "NodeJS",
+            "MongoDB", "Firebase", "Chart.js"
         ],
-        "LINK": "https://github.com/AmitGupta7580/AHP-Analyser"
+        "LINK": "https://github.com/AmitGupta7580/AHP-Analyser",
+        "LOGO": drdo,
     },{
         "NAME": "TSAW DRONES",
         "POSITION": "Research Intern",
         "ORG_URL": "https://www.tsaw.tech/",
-        "START_DATE": "2021-03",
-        "END_DATE": "2021-06",
+        "DURATION": "( March 2021 - June 2021 )",
         "HIGHLIGHTS": [
             "Devloped a Aerial Obstacle Avoidance Algorithm",
-            "Research on algorithms used for obstacle-avoidance in Air for Drones", 
+            "Research on 3D obstacle-avoidance algorithms", 
             "Algorithm used : Dynamic Window Approach (DWA)", 
             "Simulation of Drone is done in Airsim Blocks environment"
         ],
         "TECHNOLOGIES": [
             "Airsim (Drone Simulator)",
-            "YOLOv4 Object Detection"
-        ]
+            "YOLOv4"
+        ],
+        "LOGO": tsaw,
     }
 ]

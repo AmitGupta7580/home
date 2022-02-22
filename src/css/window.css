@@ -73,3 +73,34 @@
   text-align: center;
   flex-grow: 100;
 }
+
+
+.tech-tag:before {
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid red;
+  position: absolute;
+  top: 50%;
+  /* margin-top: -9px;  */
+    transform: translateY(-50%);
+  right: 100%;
+  z-index: 2; 
+}
+
+.tech-tag {
+  margin-left: 15px;
+  background-color: red;
+  text-decoration: none; 
+  text-transform: uppercase;
+  padding: 1px 4px 1px 2px;
+  position: relative; 
+  display: block;
+  float: left;
+  position:relative;
+  font-size: 10px;
+  height: 16px;
+}

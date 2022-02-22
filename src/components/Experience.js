@@ -1,12 +1,79 @@
-import { Component } from 'react';
+import { React, Component } from 'react';
+import TechTag from './TechTag';
+import { experience } from '../data/experience';
+
+import '../css/experience.css';
 
 class Experience extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            tab: 0
+        };
+    }
+
+    changeTab = (shift) => {
+        var tab= (this.state.tab + shift) % experience.length;
+        if(tab < 0){
+            tab += experience.length
+        }
+        this.setState({
+            tab: tab
+        })
+    }
+
     render() {
-        return this.props.fullscreen ? (
-            <div>Experience Page full screen</div>
-        ) : (
-            <div id="experience-small">
-                
+        console.log(this.state.tab);
+        const exp = experience[this.state.tab];
+        return (
+            <div id="exp">
+                <div id="exp-heading">
+                    <b>Professional Experiences</b>
+                </div>
+                <div id="exp-exp">
+                    <div id="exp-nav-btn-left" onClick={() => { this.changeTab(-1); }}>
+                        <i className="fas fa-arrow-left"></i>
+                    </div>
+                    <div className="exp-tiel"> 
+                        {/* Experience Tiel */}
+                        <div style={{ fontSize: "20px", margin: "0px auto 0px auto", marginTop: "10px" }}><b>{ exp.POSITION }</b></div>
+                        <div style={{ fontSize: "11px", margin: "0px auto 20px auto" }}>{ exp.DURATION }</div>
+                        <div id="exp-tiel-logo">
+                            <img src={exp.LOGO} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", margin: "auto" }}/>
+                        </div>
+                        <a target="_blank" href={exp.ORG_URL} style={{ textDecoration: "none", margin: "10px auto 0px auto" }}>
+                            <div style={{ fontSize: "16px" }}>
+                                <b>{ exp.NAME }</b>
+                            </div>
+                        </a>
+                        <div style={{ display: "flex", justifyContent: "center", paddingTop: "10px" }}>
+                            <div>
+                                { exp.HIGHLIGHTS.map((hgt) => {
+                                    return <div>
+                                        <i className="fas fa-play" style={{ color: "red" }}></i>&nbsp;&nbsp;{hgt}
+                                        </div>
+                                }) }
+                            </div>
+                        </div>
+                        { exp.LINK && 
+                            <a target="_blank" href={ exp.LINK } style={{ textDecoration: "none", margin: "10px auto 0px auto" }}>
+                                <div id="exp-github-btn">
+                                    <i class="fab fa-github"></i>
+                                    &nbsp;GITHUB
+                                </div>
+                            </a> 
+                        }
+                        <div style={{ display: "flex", position: "absolute", left: "50%", transform: "translate(-50%, 0%)", bottom: "10%"}}>
+                            { exp.TECHNOLOGIES.map((tech) => {
+                                return <TechTag tech={tech} fontSize="12px" color="white" ></TechTag>
+                            }) }
+                        </div>
+                    </div>
+                    <div id="exp-nav-btn-right" onClick={() => { this.changeTab(+1); }}>
+                        <i className="fas fa-arrow-right"></i>
+                    </div>
+                </div>
             </div>
         );
     }

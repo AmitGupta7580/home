@@ -12,7 +12,7 @@ class About extends Component {
     render() {
 
         return (
-            <div id="about" className="w3-monospace">
+            <div id="about">
                 <div id="about-shortdes">
                     <div id="about-avtar">
                         <img src={profile} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", borderRadius: "100%", margin: "auto" }} />

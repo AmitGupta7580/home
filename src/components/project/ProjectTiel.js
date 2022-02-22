@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
+import TechTag from '../TechTag';
+
 import '../../css/project.css';
 import '../../css/fontawesome-free-5.15.4-web/css/all.css';
-
-class TechTag extends Component {
-    render() {
-        const {tech} = this.props;
-        return (
-            <div className="projects-tiel-tech-tag">{tech}</div>
-        );
-    }
-}
 
 class ProjectTiel extends Component {
     render() {
@@ -35,7 +28,7 @@ class ProjectTiel extends Component {
                         <p>{project.DESCRIPTION}</p>
                         <div className="projects-tiel-tech">
                             {project.TECH.map((tech) => {
-                                return <TechTag tech={tech} ></TechTag>
+                                return <TechTag tech={tech} color="white" bgcolor="red" fontSize="10px" ></TechTag>
                             })}
                         </div>
                     </figcaption>
