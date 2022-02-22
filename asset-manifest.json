@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.65e80eea.css",
-    "main.js": "/home/static/js/main.ce709d06.js",
+    "main.css": "/home/static/css/main.28c28966.css",
+    "main.js": "/home/static/js/main.3479d86b.js",
     "static/js/787.77008476.chunk.js": "/home/static/js/787.77008476.chunk.js",
     "static/media/fa-solid-900.svg": "/home/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
     "static/media/fa-brands-400.svg": "/home/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
@@ -11,6 +11,7 @@
     "static/media/fa-regular-400.svg": "/home/static/media/fa-regular-400.4689f52cc96215721344.svg",
     "static/media/fa-brands-400.eot": "/home/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
     "static/media/fa-brands-400.ttf": "/home/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/drdo.png": "/home/static/media/drdo.0ddb0209f40e2e5655e4.png",
     "static/media/bgimage3.jpg": "/home/static/media/bgimage3.4f8a7d85c1fb40bdba87.jpg",
     "static/media/soa.jpg": "/home/static/media/soa.6a893773177bfd5ea26f.jpg",
     "static/media/fa-solid-900.woff": "/home/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
@@ -21,6 +22,7 @@
     "static/media/byakugan.jpg": "/home/static/media/byakugan.b85fe6c10be0d9da63af.jpg",
     "static/media/digi_share.jpg": "/home/static/media/digi_share.b85fe6c10be0d9da63af.jpg",
     "static/media/mnnit_query.jpg": "/home/static/media/mnnit_query.b85fe6c10be0d9da63af.jpg",
+    "static/media/tsaw.png": "/home/static/media/tsaw.a786eb9be8ea9e5cb621.png",
     "static/media/quantum_simulator.jpg": "/home/static/media/quantum_simulator.13c3e342fe0037d5f0d8.jpg",
     "static/media/profile.jpg": "/home/static/media/profile.20eb057c2b0290f5ab00.jpg",
     "static/media/portfolio.jpg": "/home/static/media/portfolio.4d571ee7cac617bfc974.jpg",
@@ -33,12 +35,12 @@
     "static/media/fa-regular-400.woff": "/home/static/media/fa-regular-400.bb58e57c48a3e911f15f.woff",
     "static/media/fa-regular-400.woff2": "/home/static/media/fa-regular-400.7a3337626410ca2f4071.woff2",
     "index.html": "/home/index.html",
-    "main.65e80eea.css.map": "/home/static/css/main.65e80eea.css.map",
-    "main.ce709d06.js.map": "/home/static/js/main.ce709d06.js.map",
+    "main.28c28966.css.map": "/home/static/css/main.28c28966.css.map",
+    "main.3479d86b.js.map": "/home/static/js/main.3479d86b.js.map",
     "787.77008476.chunk.js.map": "/home/static/js/787.77008476.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65e80eea.css",
-    "static/js/main.ce709d06.js"
+    "static/css/main.28c28966.css",
+    "static/js/main.3479d86b.js"
   ]
 }
