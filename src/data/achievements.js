@@ -10,32 +10,35 @@ export const achievements = [
         "TITLE": "3rd Hack36",
         "DATE": "2021-04-10",
         "AWARDER": "College",
-        "SUMMARY": "Annual hackathon of 36-hours in MNNIT Allahabad"
-    },
-    {
-        "TITLE": "1st CodeWarriors Avishkar 2k20",
-        "DATE": "2020-10-05",
-        "AWARDER": "College"
-    },
-    {
-        "TITLE": "2nd Guardian",
-        "DATE": "2020-10-05",
-        "AWARDER": "College"
+        "SUMMARY": "36-hours\nAnnual hackathon\nMNNIT Allahabad"
     },
     {
         "TITLE": "5* Codechef",
         "DATE": "2020-10-05",
         "AWARDER": "Codechef",
-        "LOGO": <div className="ach-trophy"><i className="fas fa-star"></i></div>
+        "LOGO": <div className="ach-trophy"><i className="fas fa-star"></i></div>,
+        "LINK": "https://www.codechef.com/users/ammmy_758000"
     },
     {
-        "TITLE": "Expert Codeforces",
+        "TITLE": "Expert\nCodeforces",
         "DATE": "2020-10-05",
-        "AWARDER": "Codeforces"
+        "AWARDER": "Codeforces",
+        "LINK": "https://codeforces.com/profile/ammmy758000"
     },
     {
-        "TITLE": "Top 20 in India CTFTime",
+        "TITLE": "Top 20 in India\nCTFTime",
         "DATE": "2020-10-05",
-        "AWARDER": "CTFTime"
+        "AWARDER": "CTFTime",
+        "LINK": "https://ctftime.org/team/155001"
+    },
+    {
+        "TITLE": "1st CodeWarriors\nAvishkar 2k20",
+        "DATE": "2020-10-05",
+        "AWARDER": "College"
+    },
+    {
+        "TITLE": "2nd Guardian\nAvishkar 2k20",
+        "DATE": "2020-10-05",
+        "AWARDER": "College"
     }
 ]
