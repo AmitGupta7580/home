@@ -1,43 +1,41 @@
+import '../css/achievements.css'
+
 export const achievements = [
     {
-        "title": "ICPC Regionalist",
-        "date": "2021-09-01",
-        "awarder": "Baylor University"
+        "TITLE": "ICPC Regionalist",
+        "DATE": "2021-09-01",
+        "AWARDER": "Baylor University",
     },
     {
-        "title": "3rd in Hack36",
-        "date": "2021-04-10",
-        "awarder": "College",
-        "summary": "Annual hackathon of 36-hours in MNNIT Allahabad"
+        "TITLE": "3rd Hack36",
+        "DATE": "2021-04-10",
+        "AWARDER": "College",
+        "SUMMARY": "Annual hackathon of 36-hours in MNNIT Allahabad"
     },
     {
-        "title": "1st in CodeWarriors Avishkar 2k20",
-        "date": "2020-10-05",
-        "awarder": "College"
+        "TITLE": "1st CodeWarriors Avishkar 2k20",
+        "DATE": "2020-10-05",
+        "AWARDER": "College"
     },
     {
-        "title": "2nd in Guardian",
-        "date": "2020-10-05",
-        "awarder": "College"
+        "TITLE": "2nd Guardian",
+        "DATE": "2020-10-05",
+        "AWARDER": "College"
     },
     {
-        "title": "5* on Codechef",
-        "date": "2020-10-05",
-        "awarder": "Codechef"
+        "TITLE": "5* Codechef",
+        "DATE": "2020-10-05",
+        "AWARDER": "Codechef",
+        "LOGO": <div className="ach-trophy"><i className="fas fa-star"></i></div>
     },
     {
-        "title": "Top 10 in Devjam and Droidrush",
-        "date": "2020-10-05",
-        "awarder": "College"
+        "TITLE": "Expert Codeforces",
+        "DATE": "2020-10-05",
+        "AWARDER": "Codeforces"
     },
     {
-        "title": "Expert on Codeforces",
-        "date": "2020-10-05",
-        "awarder": "Codeforces"
-    },
-    {
-        "title": "Top 20 in India on CTFTime",
-        "date": "2020-10-05",
-        "awarder": "CTFTime"
+        "TITLE": "Top 20 in India CTFTime",
+        "DATE": "2020-10-05",
+        "AWARDER": "CTFTime"
     }
 ]
