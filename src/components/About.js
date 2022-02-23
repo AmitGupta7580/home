@@ -3,7 +3,7 @@ import { about } from '../data/about';
 
 import '../css/about.css';
 import profile from '../images/profile.jpg'
-import { Tabs } from './Data';
+import { CONSTANTS, Tabs } from './Data';
 
 class About extends Component {
 
@@ -25,7 +25,7 @@ class About extends Component {
                     </div>
                 </div>
                 <div style={{ width: "62.5%", height: "100%"}}>
-                    <div id="about-longdes">
+                    <div id="about-longdes" style={{ ...(CONSTANTS.light ? { backgroundColor: CONSTANTS.LIGHT_BGCOLOR[1] } : { backgroundColor: CONSTANTS.DARK_BGCOLOR[1] } ) }}>
                         <div style={{ fontSize: "130%" }}><b>{ about.DES_TITLE }</b></div>
                         <div>{ about.DESCRIPTION }</div>
                         <div className="about-longdes-heading" >
@@ -35,7 +35,7 @@ class About extends Component {
                             return (
                                 <div style={{ marginBottom: "2%" }}>
                                     <div style={{ display: "flex" }}>
-                                        <div style={{ width: "25px", height: "25px", borderRadius: "25px", backgroundColor: "white", textAlign: "center" }}>
+                                        <div style={{ width: "25px", height: "25px", borderRadius: "25px",textAlign: "center", ...(CONSTANTS.light ? { backgroundColor: CONSTANTS.LIGHT_BGCOLOR[0] } : { backgroundColor: CONSTANTS.DARK_BGCOLOR[0] }) }}>
                                             { edu.URL !== "" && <a href={ edu.URL }><i className="fas fa-university"></i></a>}
                                             { edu.URL === "" && <i className="fas fa-university"></i>}
                                         </div>

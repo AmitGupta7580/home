@@ -116,8 +116,8 @@ class Window extends Component {
 
     render() {
         return (
-            <div className="window" id={"window-" + this.props.tab.id} style={{ ...(this.props.tab.fullscreen ? { top: '45%', left: '54%', width: "92%", height: "90%"} : { top: this.props.tab.top + '%', left: this.props.tab.left + '%', width: this.props.tab.short_width + "%", height: this.props.tab.short_height + "%" }), transform: "translate(-50%, -50%)" ,zIndex: this.props.tab.zIndex, opacity: this.props.tab.opacity, ...(CONSTANTS.light ? {backgroundColor: "#f1f1f1" } : {backgroundColor: "#2e3133" }) }}>
-                <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ ...(CONSTANTS.light ? {backgroundColor: "#d3d3d3" } : {backgroundColor: "#2e3133", color: "white" }) }}>
+            <div className="window" id={"window-" + this.props.tab.id} style={{ ...(this.props.tab.fullscreen ? { top: '45%', left: '54%', width: "92%", height: "90%"} : { top: this.props.tab.top + '%', left: this.props.tab.left + '%', width: this.props.tab.short_width + "%", height: this.props.tab.short_height + "%" }), transform: "translate(-50%, -50%)" ,zIndex: this.props.tab.zIndex, opacity: this.props.tab.opacity, ...(CONSTANTS.light ? {backgroundColor: CONSTANTS.LIGHT_BGCOLOR[0] } : {backgroundColor: CONSTANTS.DARK_BGCOLOR[0], color: "#c9d1d9" }) }}>
+                <div className="window-header" onMouseDown={ this.dragMouseDown } style={{ ...(CONSTANTS.light ? {backgroundColor: CONSTANTS.LIGHT_BGCOLOR[1] } : {backgroundColor: CONSTANTS.DARK_BGCOLOR[1] }) }}>
                     <div className="window-header-close" onClick={ () => this.props.handleClose(this.props.tab) }>
                         <i className="fas fa-times window-header-close-icon"></i>
                     </div>&nbsp;

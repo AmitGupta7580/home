@@ -25,7 +25,7 @@ class Settings extends Component {
                 <div id="setting-theme">
                     <label class="setting-switch">
                         <input type="checkbox" onChange={ this.props.toggleTheme } defaultChecked={!CONSTANTS.light} />
-                        <span class="setting-slider setting-round"></span>
+                        <span class="setting-slider setting-round" style={{ ...(CONSTANTS.light ? { backgroundColor: CONSTANTS.LIGHT_BGCOLOR[1] } : { backgroundColor: CONSTANTS.DARK_BGCOLOR[1] }) }}></span>
                     </label>
                 </div>
                 <div id="setting-header1-changeBackground">

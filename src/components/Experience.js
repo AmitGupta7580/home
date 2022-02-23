@@ -1,6 +1,7 @@
 import { React, Component } from 'react';
 import TechTag from './TechTag';
 import { experience } from '../data/experience';
+import { CONSTANTS } from './Data';
 
 import '../css/experience.css';
 
@@ -29,7 +30,7 @@ class Experience extends Component {
             <div id="exp">
                 <div id="exp-exp">
                     { experience.map((exp) => {
-                        return <div className="exp-tiel"> 
+                        return <div className="exp-tiel" style={{ ...(CONSTANTS.light ? { backgroundColor: CONSTANTS.LIGHT_BGCOLOR[1] } : { backgroundColor: CONSTANTS.DARK_BGCOLOR[1] }) }}> 
                             {/* Experience Tiel */}
                             <div style={{ fontSize: "20px", margin: "0px auto 0px auto", marginTop: "10px" }}><b>{ exp.POSITION }</b></div>
                             <div style={{ fontSize: "11px", margin: "0px auto 20px auto" }}>{ exp.DURATION }</div>

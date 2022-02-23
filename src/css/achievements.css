@@ -20,8 +20,6 @@
     margin: 3%;
     width: 140px;
     height: 190px;
-    background-color: rgb(233, 104, 104);
-    color: black;
     border-radius: 5px;
 }
 
@@ -30,6 +28,6 @@
     font-size: 50px;
     display: flex;
     justify-content: center;
-    color: rgb(219, 219, 25);
+    color: rgb(255, 198, 40);
 }
 

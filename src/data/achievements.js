@@ -1,3 +1,4 @@
+import { CONSTANTS } from '../components/Data'
 import '../css/achievements.css'
 
 export const achievements = [
@@ -16,7 +17,7 @@ export const achievements = [
         "TITLE": "5* Codechef",
         "DATE": "2020-10-05",
         "AWARDER": "Codechef",
-        "LOGO": <div className="ach-trophy"><i className="fas fa-star"></i></div>,
+        "LOGO": <div className="ach-trophy" style={{ ...(CONSTANTS.light ? { color: CONSTANTS.LIGHT_BGCOLOR[2] } : { color: CONSTANTS.DARK_BGCOLOR[2] } ) }}><i className="fas fa-star"></i></div>,
         "LINK": "https://www.codechef.com/users/ammmy_758000"
     },
     {

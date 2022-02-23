@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { projects } from '../../data/projects';
+import { CONSTANTS } from '../Data';
 
 import '../../css/project.css';
 import ProjectTabs from './ProjectTabs';
@@ -69,7 +70,7 @@ class Project extends Component {
                         })}
                     </ProjectTabs>
                 </div>
-                <div id="projects">
+                <div id="projects" style={{ ...(CONSTANTS.light ? { backgroundColor: CONSTANTS.LIGHT_BGCOLOR[1] } : { backgroundColor: CONSTANTS.DARK_BGCOLOR[1] }) }}>
                     {this.state.filtered_projects.map((project) => {
                         return <ProjectTiel project={project}></ProjectTiel>
                     })}
